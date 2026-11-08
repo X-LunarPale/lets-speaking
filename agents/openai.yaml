@@ -1,0 +1,4 @@
+interface:
+  display_name: "Let‘s speaking"
+  short_description: "帮助检查和微调 ACE Studio 普通话说话工程，尽量保留情绪、语气和节奏"
+  default_prompt: "使用 $lets-speaking，帮我检查这个 ACE Studio 普通话说话工程，只调整有问题的部分，保留原来的情绪和语气。"

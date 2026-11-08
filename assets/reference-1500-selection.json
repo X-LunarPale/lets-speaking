@@ -1,0 +1,188 @@
+{
+  "schema": "ace-speech-curated-reference-selection-v1",
+  "reference_id": "1500-intonation",
+  "source": {
+    "path": "1500语调.acep",
+    "file_bytes": 3087056,
+    "format": "ACEP2",
+    "content_offset": 1280,
+    "compressed_bytes": 3085776,
+    "decoded_bytes": 7083400,
+    "project_version": 22
+  },
+  "rules": {
+    "core": "Existing numeric index; >=40 samples, core raw span<=8, core max step<=0.25, core raw within[-12,12], fully visible note, whole-note drawn_pitch_fraction==1",
+    "whole_note": "Fully drawn, no exact scaffold cancellation, rawspan<=8, maxstep<=0.25, raw within[-12,12]",
+    "context": "+/-24ticks all finite, raw within[-12,12], maxstep<=0.25",
+    "pronunciation": "CHN, noncontinuation, resolved head",
+    "proposal_sampling": "6 per shape; maximize shape-pattern diversity, balance global patterns, effective phonemes and lyrics, distribute source positions",
+    "limits": "Inspectability only; not a damaged/healthy classifier; no native voicing, actual F0 or listening validation.",
+    "visual_selection": "Review all 36 proposals' full-note and flank plots; defer six complex edge/reversal examples into separate contextual study cases. Deferral is a curation preference, not an error verdict.",
+    "shape_definition": "Peak/valley/turns classify residuals after removing the endpoint chord; rise/fall/level describe small-residual endpoint trends. Neither is a lexical tone.",
+    "expression_context": "Emotion, speech act and stress intent remain unassessed in all 36 examples. Short numerical flanks and lyric excerpts do not establish full-utterance expression. Complexity does not imply damage, and unknown expression does not mean neutral."
+  },
+  "selection_stage_counts": {
+    "raw_numeric_candidates": 2258,
+    "core_filtered": 1434,
+    "whole_note_filtered": 961,
+    "context_filtered": 670,
+    "eligible_shapes": {
+      "turns": 36,
+      "peak": 132,
+      "valley": 218,
+      "rise": 41,
+      "fall": 153,
+      "level": 90
+    },
+    "eligible_shape_patterns": {
+      "rise": {
+        "0": 9,
+        "1": 6,
+        "2": 10,
+        "3": 7,
+        "4": 9
+      },
+      "fall": {
+        "0": 38,
+        "1": 30,
+        "2": 30,
+        "3": 34,
+        "4": 21
+      },
+      "peak": {
+        "0": 33,
+        "1": 20,
+        "2": 24,
+        "3": 36,
+        "4": 19
+      },
+      "valley": {
+        "0": 48,
+        "1": 37,
+        "2": 38,
+        "3": 59,
+        "4": 36
+      },
+      "turns": {
+        "0": 10,
+        "1": 5,
+        "2": 7,
+        "3": 7,
+        "4": 7
+      },
+      "level": {
+        "0": 16,
+        "1": 14,
+        "2": 24,
+        "3": 19,
+        "4": 17
+      }
+    }
+  },
+  "visually_reviewed_proposal_count": 36,
+  "deferred_after_visual_review": [
+    {
+      "occurrence_id": "T1/P0/N170",
+      "lyric": "知",
+      "shape": "peak",
+      "reason": "Multiple edge turns make this a less clear initial learning example."
+    },
+    {
+      "occurrence_id": "T1/P4/N44",
+      "lyric": "凝",
+      "shape": "peak",
+      "reason": "Complex tail recovery needs native context before learning from it."
+    },
+    {
+      "occurrence_id": "T1/P0/N202",
+      "lyric": "谢",
+      "shape": "valley",
+      "reason": "Rapid recovery and another tail turn need native context."
+    },
+    {
+      "occurrence_id": "T1/P1/N50",
+      "lyric": "是",
+      "shape": "valley",
+      "reason": "Several head/tail turns make the intended contour less clear."
+    },
+    {
+      "occurrence_id": "T1/P4/N1",
+      "lyric": "不",
+      "shape": "valley",
+      "reason": "Tail dip after the core needs native context."
+    },
+    {
+      "occurrence_id": "T1/P4/N231",
+      "lyric": "我",
+      "shape": "turns",
+      "reason": "Core reversal plus a separate tail dip need native context."
+    }
+  ],
+  "selected_count": 30,
+  "selected_shapes": {
+    "rise": 6,
+    "fall": 6,
+    "peak": 4,
+    "valley": 3,
+    "turns": 5,
+    "level": 6
+  },
+  "selected_patterns": {
+    "0": 5,
+    "1": 6,
+    "2": 7,
+    "3": 7,
+    "4": 5
+  },
+  "selected_occurrence_ids": [
+    "T1/P0/N161",
+    "T1/P1/N38",
+    "T1/P2/N23",
+    "T1/P3/N31",
+    "T1/P3/N561",
+    "T1/P4/N85",
+    "T1/P0/N193",
+    "T1/P0/N619",
+    "T1/P1/N1",
+    "T1/P2/N13",
+    "T1/P3/N59",
+    "T1/P4/N6",
+    "T1/P1/N19",
+    "T1/P1/N396",
+    "T1/P2/N15",
+    "T1/P3/N10",
+    "T1/P2/N10",
+    "T1/P3/N4",
+    "T1/P4/N246",
+    "T1/P0/N186",
+    "T1/P1/N142",
+    "T1/P2/N48",
+    "T1/P3/N43",
+    "T1/P4/N49",
+    "T1/P0/N197",
+    "T1/P1/N21",
+    "T1/P2/N12",
+    "T1/P2/N547",
+    "T1/P3/N17",
+    "T1/P4/N7"
+  ],
+  "visual_review": "Reviewed complete note plus 24-tick flanks; no synthesis or listening.",
+  "known_diagnostic_exclusions": [
+    {
+      "occurrence_id": "T1/P4/N383",
+      "reason": "Large core span; no health verdict from raw data alone."
+    },
+    {
+      "occurrence_id": "T1/P3/N477",
+      "reason": "Smooth-looking core followed immediately by a large raw tail jump."
+    }
+  ],
+  "raw_vuv_status": "All selected cores lack raw VUV; effective native voicing remains unknown.",
+  "context_cases_asset": "reference-1500-context-cases.json",
+  "limits": [
+    "Selection thresholds are local curation preferences, not legal pitch or damage thresholds.",
+    "A smooth whole note and flanks can still contain the wrong lexical tone or expression.",
+    "Do not apply this source's higher register or timing to another speaker automatically.",
+    "No original project, live app state, source phonemes, timing or parameter data was changed."
+  ]
+}

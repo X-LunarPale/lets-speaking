@@ -1,0 +1,697 @@
+{
+  "schema": "ace-speech-deep-analysis-v2",
+  "source": {
+    "path": "第二章.acep",
+    "file_bytes": 19521876,
+    "format": "ACEP2",
+    "content_offset": 1280,
+    "compressed_bytes": 19520596,
+    "decoded_bytes": 125915709,
+    "project_version": 14
+  },
+  "method": {
+    "tempo": "step tempos integrated, last event at a duplicated position wins",
+    "stable_core": "at least 60ms inside full note start/end, intersect visible trim",
+    "candidate_selection": "at least10coreticks, all finite note.pitch+delta in[20,100], maxrawstep<=2semitones/tick; no explicit rawVUV0; continuation head resolved",
+    "selection_limits": "Numeric filters are for this diagnostic index, never corruption or valid pitch boundaries.",
+    "review_flags": "Raw span above12 semitones is only a sensitivity-analysis stratum, not a corruption threshold; raw_vuv_absent means unknown voicing.",
+    "approx_midi": "note.pitch+rawdelta within stable note interiors; not native final/combined",
+    "voicing_limits": "Legacy VUV0 exclusion is precautionary from reference timing evidence, not verified native polarity; missing VUV does not imply voiced.",
+    "bridge_test": "unique rounded starts at20/50/80percent of each eligible core; endpoint distance=width ticks, width+1 samples; compare endpoint chord to original rawdelta",
+    "rmse_scope": "full window including the two unchanged endpoints; not masked-interior-only RMSE",
+    "shape_time_axis": "normalized by ticks, not elapsed time; no visible reference note crosses an effective tempo change",
+    "overlap_limit": "core windows intersecting other notes are excluded; other numeric candidates are still not verified donors",
+    "test_limits": "No listening groundtruth, no model render, no actual ACE write; evaluated chord is not guaranteed identical to native spline boundary tangents."
+  },
+  "totals": {
+    "visible_note_occurrences": 4601,
+    "excluded_from_contour_candidate_bank": 1726,
+    "excluded_due_to_core_step_gt2_semitones": 84,
+    "excluded_due_to_explicit_raw_vuv0_in_core": 8,
+    "duplicate_core_content_occurrences": 26,
+    "patterns_with_notes": 95,
+    "patterns_without_notes": 1,
+    "unique_numeric_core_candidates": 2757
+  },
+  "tracks": [
+    {
+      "index": 0,
+      "visible_duration_ms": {
+        "count": 1668,
+        "min": 15.625,
+        "p05": 45.833333,
+        "p25": 114.583333,
+        "median": 159.375,
+        "p75": 189.84375,
+        "p95": 250.0,
+        "p99": 310.416667,
+        "max": 431.2499999999986
+      },
+      "core_note_median_midi": {
+        "count": 1061,
+        "min": 40.22367858886719,
+        "p05": 52.128789,
+        "p25": 55.00874,
+        "median": 57.589931,
+        "p75": 60.943486,
+        "p95": 64.174005,
+        "p99": 65.578553,
+        "max": 69.38981425762177
+      }
+    },
+    {
+      "index": 1,
+      "visible_duration_ms": {
+        "count": 1377,
+        "min": 26.041666666515084,
+        "p05": 42.916667,
+        "p25": 119.791667,
+        "median": 159.375,
+        "p75": 200.0,
+        "p95": 260.416667,
+        "p99": 309.375,
+        "max": 399.99999999997726
+      },
+      "core_note_median_midi": {
+        "count": 908,
+        "min": 44.6797661781311,
+        "p05": 51.736536,
+        "p25": 54.656488,
+        "median": 57.67477,
+        "p75": 60.587486,
+        "p95": 63.628897,
+        "p99": 64.835021,
+        "max": 72.76459980010986
+      }
+    },
+    {
+      "index": 2,
+      "visible_duration_ms": {
+        "count": 240,
+        "min": 26.04166666662877,
+        "p05": 45.729167,
+        "p25": 110.416667,
+        "median": 159.375,
+        "p75": 190.625,
+        "p95": 234.635417,
+        "p99": 269.791667,
+        "max": 319.79166666656056
+      },
+      "core_note_median_midi": {
+        "count": 156,
+        "min": 52.89770605415106,
+        "p05": 54.17352,
+        "p25": 57.117476,
+        "median": 60.775531,
+        "p75": 63.613164,
+        "p95": 66.13918,
+        "p99": 66.826748,
+        "max": 67.27688747644424
+      }
+    },
+    {
+      "index": 3,
+      "visible_duration_ms": {
+        "count": 433,
+        "min": 26.041666666515084,
+        "p05": 44.791667,
+        "p25": 110.416667,
+        "median": 150.0,
+        "p75": 189.583333,
+        "p95": 250.0,
+        "p99": 289.583333,
+        "max": 330.2083333335304
+      },
+      "core_note_median_midi": {
+        "count": 269,
+        "min": 50.422786712646484,
+        "p05": 51.862095,
+        "p25": 54.873157,
+        "median": 57.499849,
+        "p75": 61.182789,
+        "p95": 64.457857,
+        "p99": 65.530153,
+        "max": 66.2737734913826
+      }
+    },
+    {
+      "index": 4,
+      "visible_duration_ms": {
+        "count": 883,
+        "min": 26.041666666515084,
+        "p05": 43.75,
+        "p25": 110.416667,
+        "median": 150.0,
+        "p75": 190.625,
+        "p95": 250.0,
+        "p99": 300.0,
+        "max": 389.5833333333485
+      },
+      "core_note_median_midi": {
+        "count": 538,
+        "min": 42.4511775970459,
+        "p05": 52.039207,
+        "p25": 54.90855,
+        "median": 57.456653,
+        "p75": 61.006574,
+        "p95": 63.800749,
+        "p99": 65.409409,
+        "max": 65.7954568862915
+      }
+    }
+  ],
+  "candidate_shapes": {
+    "peak": 527,
+    "level": 618,
+    "valley": 986,
+    "turns": 145,
+    "fall": 360,
+    "rise": 121
+  },
+  "candidate_review_flags": {
+    "raw_vuv_absent": 2719,
+    "raw_span_above12_semitones": 68
+  },
+  "most_common_candidate_syllables": [
+    [
+      "d e",
+      78
+    ],
+    [
+      "sh iii",
+      78
+    ],
+    [
+      "y i",
+      72
+    ],
+    [
+      "b u",
+      53
+    ],
+    [
+      "zh e",
+      49
+    ],
+    [
+      "r en",
+      48
+    ],
+    [
+      "w uei",
+      45
+    ],
+    [
+      "w uo",
+      43
+    ],
+    [
+      "n i",
+      39
+    ],
+    [
+      "j i",
+      39
+    ],
+    [
+      "y iou",
+      37
+    ],
+    [
+      "m en",
+      35
+    ],
+    [
+      "g e",
+      32
+    ],
+    [
+      "l e",
+      31
+    ],
+    [
+      "zh iii",
+      30
+    ],
+    [
+      "l ai",
+      29
+    ],
+    [
+      "y van",
+      29
+    ],
+    [
+      "z ai",
+      28
+    ],
+    [
+      "n eng",
+      27
+    ],
+    [
+      "h uei",
+      27
+    ]
+  ],
+  "bridge_holdout": {
+    "4": {
+      "window_count": 8271,
+      "duration_ms": {
+        "count": 8271,
+        "min": 3.8461538461547207,
+        "p05": 4.166667,
+        "p25": 4.166667,
+        "median": 4.166667,
+        "p75": 4.166667,
+        "p95": 4.166667,
+        "p99": 4.166667,
+        "max": 4.166666666833407
+      },
+      "max_error_semitones": {
+        "count": 8271,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 1.9e-05,
+        "median": 0.000281,
+        "p75": 0.005631,
+        "p95": 0.066212,
+        "p99": 0.181395,
+        "max": 1.821171760559082
+      },
+      "rmse_semitones": {
+        "count": 8271,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 1.1e-05,
+        "median": 0.000164,
+        "p75": 0.003259,
+        "p95": 0.03826,
+        "p99": 0.108757,
+        "max": 1.0375763877751034
+      },
+      "fraction_above_0_25_semitones": 0.005803409503083061,
+      "fraction_above_0_5_semitones": 0.001088139281828074,
+      "worst_examples": [
+        {
+          "source_id": "core-1403",
+          "occurrence_id": "T1/P2/N188",
+          "local_range": [
+            44465,
+            44469
+          ],
+          "duration_ms": 4.1666666667197205,
+          "max_error_semitones": 1.821171760559082,
+          "rmse_semitones": 1.0375763877751034
+        },
+        {
+          "source_id": "core-2400",
+          "occurrence_id": "T4/P8/N566",
+          "local_range": [
+            139819,
+            139823
+          ],
+          "duration_ms": 4.166666666833407,
+          "max_error_semitones": 0.9329382479190826,
+          "rmse_semitones": 0.5010603704469816
+        },
+        {
+          "source_id": "core-1795",
+          "occurrence_id": "T1/P4/N161",
+          "local_range": [
+            37967,
+            37971
+          ],
+          "duration_ms": 4.1666666667197205,
+          "max_error_semitones": 0.919680118560791,
+          "rmse_semitones": 0.5242110236928352
+        }
+      ]
+    },
+    "8": {
+      "window_count": 8115,
+      "duration_ms": {
+        "count": 8115,
+        "min": 7.692307692309441,
+        "p05": 8.333333,
+        "p25": 8.333333,
+        "median": 8.333333,
+        "p75": 8.333333,
+        "p95": 8.333333,
+        "p99": 8.333333,
+        "max": 8.333333333439441
+      },
+      "max_error_semitones": {
+        "count": 8115,
+        "min": 0.0,
+        "p05": 2.6e-05,
+        "p25": 0.00228,
+        "median": 0.01158,
+        "p75": 0.044785,
+        "p95": 0.232847,
+        "p99": 0.551423,
+        "max": 2.9176037311553955
+      },
+      "rmse_semitones": {
+        "count": 8115,
+        "min": 0.0,
+        "p05": 1.5e-05,
+        "p25": 0.00131,
+        "median": 0.006688,
+        "p75": 0.02584,
+        "p95": 0.132924,
+        "p99": 0.319344,
+        "max": 1.6145224923065447
+      },
+      "fraction_above_0_25_semitones": 0.044485520640788666,
+      "fraction_above_0_5_semitones": 0.01170671595810228,
+      "worst_examples": [
+        {
+          "source_id": "core-2002",
+          "occurrence_id": "T2/P12/N209",
+          "local_range": [
+            58509,
+            58517
+          ],
+          "duration_ms": 8.333333333212067,
+          "max_error_semitones": 2.9176037311553955,
+          "rmse_semitones": 1.6145224923065447
+        },
+        {
+          "source_id": "core-1403",
+          "occurrence_id": "T1/P2/N188",
+          "local_range": [
+            44461,
+            44469
+          ],
+          "duration_ms": 8.333333333382598,
+          "max_error_semitones": 2.731757640838623,
+          "rmse_semitones": 1.5391403856356571
+        },
+        {
+          "source_id": "core-1795",
+          "occurrence_id": "T1/P4/N161",
+          "local_range": [
+            37964,
+            37972
+          ],
+          "duration_ms": 8.333333333325754,
+          "max_error_semitones": 1.7887376546859741,
+          "rmse_semitones": 1.013758586595372
+        }
+      ]
+    },
+    "16": {
+      "window_count": 7530,
+      "duration_ms": {
+        "count": 7530,
+        "min": 15.384615384618883,
+        "p05": 16.666667,
+        "p25": 16.666667,
+        "median": 16.666667,
+        "p75": 16.666667,
+        "p95": 16.666667,
+        "p99": 16.666667,
+        "max": 16.666666666878882
+      },
+      "max_error_semitones": {
+        "count": 7530,
+        "min": 1.1546537280082703e-05,
+        "p05": 0.005081,
+        "p25": 0.022121,
+        "median": 0.05734,
+        "p75": 0.192329,
+        "p95": 0.670512,
+        "p99": 1.552191,
+        "max": 5.920204401016235
+      },
+      "rmse_semitones": {
+        "count": 7530,
+        "min": 4.634227970306492e-06,
+        "p05": 0.002892,
+        "p25": 0.013298,
+        "median": 0.034949,
+        "p75": 0.115998,
+        "p95": 0.406488,
+        "p99": 0.922083,
+        "max": 3.714121813393654
+      },
+      "fraction_above_0_25_semitones": 0.20265604249667996,
+      "fraction_above_0_5_semitones": 0.08685258964143426,
+      "worst_examples": [
+        {
+          "source_id": "core-2002",
+          "occurrence_id": "T2/P12/N209",
+          "local_range": [
+            58502,
+            58518
+          ],
+          "duration_ms": 16.66666666665151,
+          "max_error_semitones": 5.920204401016235,
+          "rmse_semitones": 3.3690223660903555
+        },
+        {
+          "source_id": "core-1403",
+          "occurrence_id": "T1/P2/N188",
+          "local_range": [
+            44455,
+            44471
+          ],
+          "duration_ms": 16.66666666665151,
+          "max_error_semitones": 5.529273837804794,
+          "rmse_semitones": 2.9815673391829782
+        },
+        {
+          "source_id": "core-1741",
+          "occurrence_id": "T1/P4/N88",
+          "local_range": [
+            18985,
+            19001
+          ],
+          "duration_ms": 16.66666666665151,
+          "max_error_semitones": 4.97645503282547,
+          "rmse_semitones": 3.714121813393654
+        }
+      ]
+    },
+    "24": {
+      "window_count": 6770,
+      "duration_ms": {
+        "count": 6770,
+        "min": 23.076923076899902,
+        "p05": 25.0,
+        "p25": 25.0,
+        "median": 25.0,
+        "p75": 25.0,
+        "p95": 25.0,
+        "p99": 25.0,
+        "max": 25.00000000009095
+      },
+      "max_error_semitones": {
+        "count": 6770,
+        "min": 0.00024227735896903413,
+        "p05": 0.013851,
+        "p25": 0.047248,
+        "median": 0.122285,
+        "p75": 0.389714,
+        "p95": 1.285729,
+        "p99": 2.772848,
+        "max": 9.470856030782066
+      },
+      "rmse_semitones": {
+        "count": 6770,
+        "min": 0.00011995851708156296,
+        "p05": 0.007954,
+        "p25": 0.029585,
+        "median": 0.076694,
+        "p75": 0.23456,
+        "p95": 0.799782,
+        "p99": 1.77618,
+        "max": 5.973595335138094
+      },
+      "fraction_above_0_25_semitones": 0.34239290989660265,
+      "fraction_above_0_5_semitones": 0.2016248153618907,
+      "worst_examples": [
+        {
+          "source_id": "core-2002",
+          "occurrence_id": "T2/P12/N209",
+          "local_range": [
+            58496,
+            58520
+          ],
+          "duration_ms": 25.00000000009095,
+          "max_error_semitones": 9.470856030782066,
+          "rmse_semitones": 5.973595335138094
+        },
+        {
+          "source_id": "core-1403",
+          "occurrence_id": "T1/P2/N188",
+          "local_range": [
+            44449,
+            44473
+          ],
+          "duration_ms": 24.999999999977263,
+          "max_error_semitones": 8.017480939626694,
+          "rmse_semitones": 4.132094814970421
+        },
+        {
+          "source_id": "core-2647",
+          "occurrence_id": "T4/P20/N237",
+          "local_range": [
+            52633,
+            52657
+          ],
+          "duration_ms": 25.00000000009095,
+          "max_error_semitones": 7.580998579661053,
+          "rmse_semitones": 4.81712543924083
+        }
+      ]
+    },
+    "48": {
+      "window_count": 4190,
+      "duration_ms": {
+        "count": 4190,
+        "min": 46.153846153828226,
+        "p05": 50.0,
+        "p25": 50.0,
+        "median": 50.0,
+        "p75": 50.0,
+        "p95": 50.0,
+        "p99": 50.0,
+        "max": 50.0000000001819
+      },
+      "max_error_semitones": {
+        "count": 4190,
+        "min": 0.006093243757883698,
+        "p05": 0.059775,
+        "p25": 0.190819,
+        "median": 0.434663,
+        "p75": 1.07113,
+        "p95": 3.202819,
+        "p99": 6.977941,
+        "max": 16.24995295206706
+      },
+      "rmse_semitones": {
+        "count": 4190,
+        "min": 0.0029651754553794963,
+        "p05": 0.035009,
+        "p25": 0.122054,
+        "median": 0.270679,
+        "p75": 0.63475,
+        "p95": 1.865827,
+        "p99": 4.211263,
+        "max": 9.718787224197944
+      },
+      "fraction_above_0_25_semitones": 0.6639618138424821,
+      "fraction_above_0_5_semitones": 0.45704057279236276,
+      "worst_examples": [
+        {
+          "source_id": "core-2647",
+          "occurrence_id": "T4/P20/N237",
+          "local_range": [
+            52621,
+            52669
+          ],
+          "duration_ms": 49.999999999954525,
+          "max_error_semitones": 16.24995295206706,
+          "rmse_semitones": 9.718787224197944
+        },
+        {
+          "source_id": "core-2002",
+          "occurrence_id": "T2/P12/N209",
+          "local_range": [
+            58463,
+            58511
+          ],
+          "duration_ms": 49.999999999954525,
+          "max_error_semitones": 15.040071233486135,
+          "rmse_semitones": 9.40889153376265
+        },
+        {
+          "source_id": "core-2381",
+          "occurrence_id": "T4/P7/N522",
+          "local_range": [
+            129834,
+            129882
+          ],
+          "duration_ms": 49.999999999954525,
+          "max_error_semitones": 13.849577724933624,
+          "rmse_semitones": 6.840523221200869
+        }
+      ]
+    },
+    "96": {
+      "window_count": 1144,
+      "duration_ms": {
+        "count": 1144,
+        "min": 99.99999999990905,
+        "p05": 100.0,
+        "p25": 100.0,
+        "median": 100.0,
+        "p75": 100.0,
+        "p95": 100.0,
+        "p99": 100.0,
+        "max": 100.00000000013642
+      },
+      "max_error_semitones": {
+        "count": 1144,
+        "min": 0.06926405429840088,
+        "p05": 0.256401,
+        "p25": 0.749134,
+        "median": 1.433434,
+        "p75": 2.693072,
+        "p95": 7.122652,
+        "p99": 10.057773,
+        "max": 15.079861640930176
+      },
+      "rmse_semitones": {
+        "count": 1144,
+        "min": 0.03810252271169963,
+        "p05": 0.16346,
+        "p25": 0.474704,
+        "median": 0.822665,
+        "p75": 1.526783,
+        "p95": 4.084087,
+        "p99": 5.520839,
+        "max": 8.658869727960042
+      },
+      "fraction_above_0_25_semitones": 0.9501748251748252,
+      "fraction_above_0_5_semitones": 0.868006993006993,
+      "worst_examples": [
+        {
+          "source_id": "core-0263",
+          "occurrence_id": "T0/P1/N327",
+          "local_range": [
+            77968,
+            78064
+          ],
+          "duration_ms": 99.99999999999432,
+          "max_error_semitones": 15.079861640930176,
+          "rmse_semitones": 8.658869727960042
+        },
+        {
+          "source_id": "core-1300",
+          "occurrence_id": "T1/P1/N314",
+          "local_range": [
+            73568,
+            73664
+          ],
+          "duration_ms": 100.00000000002274,
+          "max_error_semitones": 14.26733496474723,
+          "rmse_semitones": 7.954201900613678
+        },
+        {
+          "source_id": "core-1300",
+          "occurrence_id": "T1/P1/N314",
+          "local_range": [
+            73583,
+            73679
+          ],
+          "duration_ms": 100.00000000002274,
+          "max_error_semitones": 12.167875613008315,
+          "rmse_semitones": 6.196058829172762
+        }
+      ]
+    }
+  }
+}

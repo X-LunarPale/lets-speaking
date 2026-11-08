@@ -1,0 +1,406 @@
+{
+  "schema": "ace-speech-reference-profile-v1",
+  "source": {
+    "path": "第二章.acep",
+    "file_bytes": 19521876,
+    "format": "ACEP2",
+    "content_offset": 1280,
+    "compressed_bytes": 19520596,
+    "decoded_bytes": 125915709,
+    "project_version": 14
+  },
+  "units": {
+    "ticks_per_quarter": 480,
+    "note_pitch": "MIDI semitones; scaffold, not measured F0",
+    "data_pitchDelta": "relative semitones against engine base pitch",
+    "anchor_pitchDelta": "absolute MIDI semitones"
+  },
+  "tempos": [
+    {
+      "position": 0.0,
+      "bpm": 120.0,
+      "bend": 0.0
+    },
+    {
+      "position": 127680.0,
+      "bpm": 120.0,
+      "bend": 0.0
+    },
+    {
+      "position": 127680.0,
+      "bpm": 130.0,
+      "bend": 0.0
+    },
+    {
+      "position": 129180.0,
+      "bpm": 120.0,
+      "bend": 0.0
+    }
+  ],
+  "tracks": [
+    {
+      "index": 0,
+      "type": "sing",
+      "patterns": 23,
+      "visible_note_occurrences": 1668,
+      "visible_note_pitch": {
+        "count": 1668,
+        "min": 40.0,
+        "p05": 52.0,
+        "p25": 56.0,
+        "median": 59.0,
+        "p75": 62.0,
+        "p95": 65.0,
+        "p99": 66.0,
+        "max": 67.0
+      }
+    },
+    {
+      "index": 1,
+      "type": "sing",
+      "patterns": 6,
+      "visible_note_occurrences": 1377,
+      "visible_note_pitch": {
+        "count": 1377,
+        "min": 50.0,
+        "p05": 52.0,
+        "p25": 55.0,
+        "median": 59.0,
+        "p75": 62.0,
+        "p95": 64.0,
+        "p99": 65.0,
+        "max": 67.0
+      }
+    },
+    {
+      "index": 2,
+      "type": "sing",
+      "patterns": 16,
+      "visible_note_occurrences": 240,
+      "visible_note_pitch": {
+        "count": 240,
+        "min": 53.0,
+        "p05": 54.0,
+        "p25": 57.0,
+        "median": 61.0,
+        "p75": 65.0,
+        "p95": 67.0,
+        "p99": 67.0,
+        "max": 68.0
+      }
+    },
+    {
+      "index": 3,
+      "type": "sing",
+      "patterns": 20,
+      "visible_note_occurrences": 433,
+      "visible_note_pitch": {
+        "count": 433,
+        "min": 40.0,
+        "p05": 52.0,
+        "p25": 55.0,
+        "median": 58.0,
+        "p75": 62.0,
+        "p95": 65.0,
+        "p99": 66.0,
+        "max": 69.0
+      }
+    },
+    {
+      "index": 4,
+      "type": "sing",
+      "patterns": 31,
+      "visible_note_occurrences": 883,
+      "visible_note_pitch": {
+        "count": 883,
+        "min": 50.0,
+        "p05": 53.0,
+        "p25": 55.0,
+        "median": 58.0,
+        "p75": 62.0,
+        "p95": 64.9,
+        "p99": 66.0,
+        "max": 67.0
+      }
+    }
+  ],
+  "totals": {
+    "patterns": 96,
+    "stored_notes": 53528,
+    "visible_note_occurrences": 4601,
+    "on_30_tick_grid": 239,
+    "nondefault_syllable_occurrences": 185,
+    "stored_track_slots": 100,
+    "occupied_tracks": 5,
+    "visible_unique_note_uuids": 4552,
+    "stored_unique_note_uuids": 4669,
+    "notes_with_serialized_vibrato": 0
+  },
+  "languages": {
+    "CHN": 4598,
+    "ENG": 3
+  },
+  "visible_note_duration_ticks": {
+    "count": 4601,
+    "min": 15.0,
+    "p05": 42.0,
+    "p25": 110.0,
+    "median": 150.0,
+    "p75": 183.0,
+    "p95": 240.0,
+    "p99": 288.0,
+    "max": 414.0
+  },
+  "visible_note_pitch": {
+    "count": 4601,
+    "min": 40.0,
+    "p05": 52.0,
+    "p25": 55.0,
+    "median": 59.0,
+    "p75": 62.0,
+    "p95": 65.0,
+    "p99": 66.0,
+    "max": 69.0
+  },
+  "head_consonants": {
+    "unit": "seconds",
+    "count": 3897,
+    "min": 0.011609977324262388,
+    "p05": 0.03,
+    "p25": 0.04,
+    "median": 0.06966,
+    "p75": 0.1,
+    "p95": 0.13932,
+    "p99": 0.17,
+    "max": 0.24380952380951726
+  },
+  "positive_brLen_raw": {
+    "count": 135,
+    "min": 0.20974999999995347,
+    "p05": 0.266458,
+    "p25": 0.309646,
+    "median": 0.349125,
+    "p75": 0.389646,
+    "p95": 0.442708,
+    "p99": 0.472879,
+    "max": 0.529958333333326
+  },
+  "parameters": {
+    "pitchDelta": {
+      "present_patterns": 96,
+      "stored_curves": 2376,
+      "visible_curves": 364,
+      "type_data": 2376,
+      "visible_nulls": 0,
+      "values_by_storage_type": {
+        "data": {
+          "count": 1047526,
+          "min": -67.0,
+          "p05": -63.0,
+          "p25": -53.635953,
+          "median": -0.884594,
+          "p75": 0.367223,
+          "p95": 3.607778,
+          "p99": 7.71243,
+          "max": 23.705053329467773
+        }
+      }
+    },
+    "tension": {
+      "present_patterns": 96,
+      "stored_curves": 0,
+      "visible_curves": 0,
+      "visible_nulls": 0,
+      "values_by_storage_type": {}
+    },
+    "falsetto": {
+      "present_patterns": 96,
+      "stored_curves": 0,
+      "visible_curves": 0,
+      "visible_nulls": 0,
+      "values_by_storage_type": {}
+    },
+    "breathiness": {
+      "present_patterns": 96,
+      "stored_curves": 3,
+      "visible_curves": 3,
+      "type_data": 3,
+      "visible_nulls": 0,
+      "values_by_storage_type": {
+        "data": {
+          "count": 730,
+          "min": 0.7311828136444092,
+          "p05": 0.731183,
+          "p25": 0.732348,
+          "median": 0.9319,
+          "p75": 0.9319,
+          "p95": 0.962545,
+          "p99": 0.989785,
+          "max": 0.996595025062561
+        }
+      }
+    },
+    "gender": {
+      "present_patterns": 96,
+      "stored_curves": 1,
+      "visible_curves": 1,
+      "type_data": 1,
+      "visible_nulls": 0,
+      "values_by_storage_type": {
+        "data": {
+          "count": 500,
+          "min": 0.001971326768398285,
+          "p05": 0.033414,
+          "p25": 0.039427,
+          "median": 0.039427,
+          "p75": 0.0681,
+          "p95": 0.0681,
+          "p99": 0.0681,
+          "max": 0.06810033321380615
+        }
+      }
+    },
+    "realEnergy": {
+      "present_patterns": 96,
+      "stored_curves": 20,
+      "visible_curves": 5,
+      "type_data": 20,
+      "visible_nulls": 0,
+      "values_by_storage_type": {
+        "data": {
+          "count": 953,
+          "min": -0.03486248478293419,
+          "p05": 0.013162,
+          "p25": 0.06609,
+          "median": 0.105041,
+          "p75": 0.178584,
+          "p95": 0.226474,
+          "p99": 0.232691,
+          "max": 0.24428121745586395
+        }
+      }
+    },
+    "realTension": {
+      "present_patterns": 96,
+      "stored_curves": 0,
+      "visible_curves": 0,
+      "visible_nulls": 0,
+      "values_by_storage_type": {}
+    },
+    "realFalsetto": {
+      "present_patterns": 96,
+      "stored_curves": 0,
+      "visible_curves": 0,
+      "visible_nulls": 0,
+      "values_by_storage_type": {}
+    },
+    "realBreathiness": {
+      "present_patterns": 96,
+      "stored_curves": 0,
+      "visible_curves": 0,
+      "visible_nulls": 0,
+      "values_by_storage_type": {}
+    },
+    "energy": {
+      "present_patterns": 96,
+      "stored_curves": 643,
+      "visible_curves": 104,
+      "type_data": 643,
+      "visible_nulls": 0,
+      "values_by_storage_type": {
+        "data": {
+          "count": 34214,
+          "min": 0.6774191856384277,
+          "p05": 0.788531,
+          "p25": 0.892473,
+          "median": 0.967742,
+          "p75": 1.082437,
+          "p95": 1.204301,
+          "p99": 1.44086,
+          "max": 1.4408602714538574
+        }
+      }
+    },
+    "vuv": {
+      "present_patterns": 96,
+      "stored_curves": 942,
+      "visible_curves": 131,
+      "type_data": 942,
+      "visible_nulls": 0,
+      "values_by_storage_type": {
+        "data": {
+          "count": 10808,
+          "min": 0.0,
+          "p05": 0.0,
+          "p25": 1.0,
+          "median": 1.0,
+          "p75": 1.0,
+          "p95": 1.0,
+          "p99": 1.0,
+          "max": 1.0
+        }
+      }
+    }
+  },
+  "vocal_controls": [
+    {
+      "track": 1,
+      "pattern": 0,
+      "lane": "soft",
+      "global": 0.0,
+      "visible_anchor_values": {
+        "count": 29,
+        "min": 0.09447674418604651,
+        "p05": 0.103997,
+        "p25": 0.14989,
+        "median": 0.188522,
+        "p75": 0.216154,
+        "p95": 0.241029,
+        "p99": 0.24283,
+        "max": 0.24317978533094814
+      }
+    },
+    {
+      "track": 1,
+      "pattern": 0,
+      "lane": "power",
+      "global": 0.0,
+      "visible_anchor_values": {
+        "count": 1,
+        "min": -0.10901162790697674,
+        "p05": -0.109012,
+        "p25": -0.109012,
+        "median": -0.109012,
+        "p75": -0.109012,
+        "p95": -0.109012,
+        "p99": -0.109012,
+        "max": -0.10901162790697674
+      }
+    },
+    {
+      "track": 1,
+      "pattern": 1,
+      "lane": "soft",
+      "global": 0.0,
+      "visible_anchor_values": {
+        "count": 613,
+        "min": -0.06372987477638642,
+        "p05": 0.013532,
+        "p25": 0.067951,
+        "median": 0.094477,
+        "p75": 0.123335,
+        "p95": 0.138081,
+        "p99": 0.150848,
+        "max": 0.15314998183139536
+      }
+    }
+  ],
+  "structural_observations": [],
+  "limits": [
+    "One user-designated speech reference; descriptive evidence, not a trained general voice model.",
+    "Visible note occurrences can share UUIDs. Preserve occurrence identity when repairing.",
+    "Raw legacy pitch deltas include low sentinel-like runs. No universal corruption threshold is inferred.",
+    "VUV polarity and exact live engine F0 are not established by offline values.",
+    "No synthesis, listening, or live target repair was performed by this analysis."
+  ]
+}

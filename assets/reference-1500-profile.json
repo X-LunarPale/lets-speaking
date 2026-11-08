@@ -1,0 +1,256 @@
+{
+  "schema": "ace-speech-reference-profile-v1",
+  "source": {
+    "path": "1500语调.acep",
+    "file_bytes": 3087056,
+    "format": "ACEP2",
+    "content_offset": 1280,
+    "compressed_bytes": 3085776,
+    "decoded_bytes": 7083400,
+    "project_version": 22
+  },
+  "units": {
+    "ticks_per_quarter": 480,
+    "note_pitch": "MIDI semitones; scaffold, not measured F0",
+    "data_pitchDelta": "relative semitones against engine base pitch",
+    "anchor_pitchDelta": "absolute MIDI semitones"
+  },
+  "tempos": [
+    {
+      "position": 0.0,
+      "bpm": 120.0,
+      "bend": 0.0
+    }
+  ],
+  "tracks": [
+    {
+      "index": 0,
+      "type": "audio",
+      "patterns": 1,
+      "visible_note_pitch": {
+        "count": 0
+      }
+    },
+    {
+      "index": 1,
+      "type": "sing",
+      "patterns": 5,
+      "visible_note_occurrences": 2643,
+      "visible_note_pitch": {
+        "count": 2643,
+        "min": 52.0,
+        "p05": 58.0,
+        "p25": 61.0,
+        "median": 64.0,
+        "p75": 67.0,
+        "p95": 70.0,
+        "p99": 72.0,
+        "max": 75.0
+      }
+    }
+  ],
+  "totals": {
+    "patterns": 6,
+    "non_tick_patterns": 1,
+    "stored_notes": 2643,
+    "visible_note_occurrences": 2643,
+    "nondefault_syllable_occurrences": 2617,
+    "on_30_tick_grid": 109,
+    "stored_track_slots": 100,
+    "occupied_tracks": 2,
+    "visible_unique_note_uuids": 2643,
+    "stored_unique_note_uuids": 2643,
+    "notes_with_serialized_vibrato": 0
+  },
+  "languages": {
+    "CHN": 2641,
+    "ENG": 2
+  },
+  "visible_note_duration_ticks": {
+    "count": 2643,
+    "min": 29.0,
+    "p05": 115.0,
+    "p25": 153.0,
+    "median": 183.0,
+    "p75": 221.0,
+    "p95": 297.0,
+    "p99": 351.22,
+    "max": 442.0
+  },
+  "visible_note_pitch": {
+    "count": 2643,
+    "min": 52.0,
+    "p05": 58.0,
+    "p25": 61.0,
+    "median": 64.0,
+    "p75": 67.0,
+    "p95": 70.0,
+    "p99": 72.0,
+    "max": 75.0
+  },
+  "head_consonants": {
+    "unit": "seconds",
+    "count": 2578,
+    "min": 0.005804988662134747,
+    "p05": 0.029025,
+    "p25": 0.04644,
+    "median": 0.06966,
+    "p75": 0.110295,
+    "p95": 0.16254,
+    "p99": 0.20898,
+    "max": 0.32507936507936463
+  },
+  "positive_brLen_raw": {
+    "count": 35,
+    "min": 0.3,
+    "p05": 0.3,
+    "p25": 0.3,
+    "median": 0.3,
+    "p75": 0.3,
+    "p95": 0.3,
+    "p99": 0.3,
+    "max": 0.3
+  },
+  "parameters": {
+    "pitchDelta": {
+      "present_patterns": 5,
+      "stored_curves": 147,
+      "visible_curves": 147,
+      "type_data": 147,
+      "visible_nulls": 0,
+      "values_by_storage_type": {
+        "data": {
+          "count": 726615,
+          "min": -69.0,
+          "p05": -64.0,
+          "p25": -16.885473,
+          "median": -0.844008,
+          "p75": 0.250435,
+          "p95": 2.365904,
+          "p99": 5.795058,
+          "max": 21.35215187072754
+        }
+      }
+    },
+    "energy": {
+      "present_patterns": 5,
+      "stored_curves": 0,
+      "visible_curves": 0,
+      "visible_nulls": 0,
+      "values_by_storage_type": {}
+    },
+    "tension": {
+      "present_patterns": 5,
+      "stored_curves": 0,
+      "visible_curves": 0,
+      "visible_nulls": 0,
+      "values_by_storage_type": {}
+    },
+    "breathiness": {
+      "present_patterns": 5,
+      "stored_curves": 0,
+      "visible_curves": 0,
+      "visible_nulls": 0,
+      "values_by_storage_type": {}
+    },
+    "falsetto": {
+      "present_patterns": 5,
+      "stored_curves": 0,
+      "visible_curves": 0,
+      "visible_nulls": 0,
+      "values_by_storage_type": {}
+    },
+    "gender": {
+      "present_patterns": 5,
+      "stored_curves": 0,
+      "visible_curves": 0,
+      "visible_nulls": 0,
+      "values_by_storage_type": {}
+    },
+    "realEnergy": {
+      "present_patterns": 5,
+      "stored_curves": 0,
+      "visible_curves": 0,
+      "visible_nulls": 0,
+      "values_by_storage_type": {}
+    },
+    "realTension": {
+      "present_patterns": 5,
+      "stored_curves": 0,
+      "visible_curves": 0,
+      "visible_nulls": 0,
+      "values_by_storage_type": {}
+    },
+    "realBreathiness": {
+      "present_patterns": 5,
+      "stored_curves": 0,
+      "visible_curves": 0,
+      "visible_nulls": 0,
+      "values_by_storage_type": {}
+    },
+    "realFalsetto": {
+      "present_patterns": 5,
+      "stored_curves": 0,
+      "visible_curves": 0,
+      "visible_nulls": 0,
+      "values_by_storage_type": {}
+    },
+    "mambaEnergy": {
+      "present_patterns": 5,
+      "stored_curves": 0,
+      "visible_curves": 0,
+      "visible_nulls": 0,
+      "values_by_storage_type": {}
+    },
+    "vuv": {
+      "present_patterns": 5,
+      "stored_curves": 1,
+      "visible_curves": 1,
+      "type_data": 1,
+      "visible_nulls": 0,
+      "values_by_storage_type": {
+        "data": {
+          "count": 36,
+          "min": 0.0,
+          "p05": 0.0,
+          "p25": 0.0,
+          "median": 0.0,
+          "p75": 1.0,
+          "p95": 1.0,
+          "p99": 1.0,
+          "max": 1.0
+        }
+      }
+    },
+    "mambaTension": {
+      "present_patterns": 5,
+      "stored_curves": 0,
+      "visible_curves": 0,
+      "visible_nulls": 0,
+      "values_by_storage_type": {}
+    },
+    "mambaBreathiness": {
+      "present_patterns": 5,
+      "stored_curves": 0,
+      "visible_curves": 0,
+      "visible_nulls": 0,
+      "values_by_storage_type": {}
+    },
+    "mambaFalsetto": {
+      "present_patterns": 5,
+      "stored_curves": 0,
+      "visible_curves": 0,
+      "visible_nulls": 0,
+      "values_by_storage_type": {}
+    }
+  },
+  "vocal_controls": [],
+  "structural_observations": [],
+  "limits": [
+    "One user-designated speech reference; descriptive evidence, not a trained general voice model.",
+    "Visible note occurrences can share UUIDs. Preserve occurrence identity when repairing.",
+    "Raw legacy pitch deltas include low sentinel-like runs. No universal corruption threshold is inferred.",
+    "VUV polarity and exact live engine F0 are not established by offline values.",
+    "No synthesis, listening, or live target repair was performed by this analysis."
+  ]
+}

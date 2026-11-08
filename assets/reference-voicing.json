@@ -1,0 +1,3242 @@
+{
+  "schema": "ace-speech-vuv-alignment-v1",
+  "source": {
+    "path": "第二章.acep",
+    "file_bytes": 19521876,
+    "format": "ACEP2",
+    "content_offset": 1280,
+    "compressed_bytes": 19520596,
+    "decoded_bytes": 125915709,
+    "project_version": 14
+  },
+  "definitions": {
+    "visibility": "[clipPos, clipPos+clipDur), integer data sample ticks",
+    "raw_cancellation": "delta equals negative nearest note-handover scaffold exactly",
+    "public_smoothed_baseline": "LibreSVIP public119-tap raised-cosine baseline; per-ms step signal and linear interpolation. Independent geometric approximation, not a live engine read.",
+    "leading_consonant_window": "[note start seconds - sum(positive headConsonants), note start). Timing interpretation for alignment, not proof of phoneme voicing.",
+    "zero_tolerances": "Numerical comparisons, not a classification of audible phonation.",
+    "missing_vuv": "No serialized value at that tick; no assumed default or polarity."
+  },
+  "totals": {
+    "visible_pitch_samples": 1047526,
+    "visible_vuv_samples": 10808,
+    "overlapping_pitch_writes": 0,
+    "overlapping_vuv_writes": 0,
+    "paired_vuv_pitch": 10291,
+    "vuv_without_pitch": 517,
+    "visible_vuv_patterns": 50,
+    "pitch_samples_without_serialized_vuv": 1037235
+  },
+  "stored_pitch_types": {
+    "data": 2376
+  },
+  "stored_vuv_types": {
+    "data": 942
+  },
+  "visible_vuv_values": {
+    "0.0": 1937,
+    "1.0": 8871
+  },
+  "raw_pairing": {
+    "(0.0, 'other_numeric')": 1876,
+    "(0.0, 'pitch_absent')": 61,
+    "(1.0, 'other_numeric')": 8415,
+    "(1.0, 'pitch_absent')": 456
+  },
+  "public_smoothed_base_pairing": {
+    "(0.0, 'abs_gt_0.1')": 1876,
+    "(1.0, 'abs_gt_0.1')": 8415
+  },
+  "public_base_plus_delta_by_flag": {
+    "1.0": {
+      "count": 8415,
+      "min": 41.2747039794922,
+      "p05": 53.045455,
+      "p25": 55.96154,
+      "median": 58.940929,
+      "p75": 62.041579,
+      "p95": 65.349105,
+      "p99": 67.394593,
+      "max": 68.88461303710939
+    },
+    "0.0": {
+      "count": 1876,
+      "min": 39.913326073266774,
+      "p05": 47.568376,
+      "p25": 54.5,
+      "median": 57.077852,
+      "p75": 60.423077,
+      "p95": 65.119932,
+      "p99": 66.502137,
+      "max": 76.40989303588869
+    }
+  },
+  "timing_categories_by_flag": {
+    "(0.0, 'gap')": 1209,
+    "(0.0, 'inside_note')": 69,
+    "(0.0, 'leading_consonant_window')": 659,
+    "(1.0, 'gap')": 592,
+    "(1.0, 'inside_note')": 7049,
+    "(1.0, 'leading_consonant_window')": 1230
+  },
+  "all_pitch_raw_cancellation": {
+    "sample_count": 184759,
+    "by_vuv_or_timing": {
+      "gap": 170500,
+      "vuv_absent": 184759,
+      "inside_note": 214,
+      "leading_consonant_window": 14045
+    }
+  },
+  "all_pitch_public_baseline_near_zero": {
+    "('abs_le_0.0001', 'vuv_absent')": 181018,
+    "('abs_le_0.01', 'vuv_absent')": 189102,
+    "('abs_le_0.1', 'vuv_absent')": 214359
+  },
+  "public_baseline_fast_vs_direct_max_error": 2.842170943040401e-14,
+  "vuv_missing_pitch_nearest_drawn_sample_distance": {
+    "(0.0, 'distance_gt10')": 49,
+    "(0.0, 'distance_le1')": 3,
+    "(0.0, 'distance_le10')": 7,
+    "(0.0, 'distance_le3')": 2,
+    "(1.0, 'distance_gt10')": 316,
+    "(1.0, 'distance_le1')": 11,
+    "(1.0, 'distance_le10')": 101,
+    "(1.0, 'distance_le3')": 28
+  },
+  "leading_consonant_syllable_counts": {
+    "(0.0, '')": 62,
+    "(0.0, 'b a')": 17,
+    "(0.0, 'b ai')": 18,
+    "(0.0, 'b an')": 26,
+    "(0.0, 'b ian')": 16,
+    "(0.0, 'b u')": 15,
+    "(0.0, 'ch u')": 12,
+    "(0.0, 'd ao')": 5,
+    "(0.0, 'd e')": 10,
+    "(0.0, 'd ian')": 12,
+    "(0.0, 'g uo')": 8,
+    "(0.0, 'h u')": 7,
+    "(0.0, 'j ie')": 50,
+    "(0.0, 'k an')": 67,
+    "(0.0, 'p ai')": 5,
+    "(0.0, 'p ei')": 2,
+    "(0.0, 'q i')": 26,
+    "(0.0, 'q ing')": 30,
+    "(0.0, 's ii')": 61,
+    "(0.0, 's uo')": 7,
+    "(0.0, 'sh iii')": 12,
+    "(0.0, 'sh u')": 7,
+    "(0.0, 't a')": 12,
+    "(0.0, 't ai')": 2,
+    "(0.0, 't ing')": 24,
+    "(0.0, 't u')": 2,
+    "(0.0, 'x i')": 11,
+    "(0.0, 'zh ao')": 53,
+    "(0.0, 'zh iii')": 37,
+    "(0.0, 'zh ong')": 24,
+    "(0.0, 'zh uen')": 19,
+    "(1.0, '')": 237,
+    "(1.0, 'b a')": 13,
+    "(1.0, 'b ai')": 12,
+    "(1.0, 'b an')": 21,
+    "(1.0, 'b i')": 1,
+    "(1.0, 'b ie')": 11,
+    "(1.0, 'b u')": 32,
+    "(1.0, 'ch u')": 51,
+    "(1.0, 'd e')": 8,
+    "(1.0, 'd ian')": 7,
+    "(1.0, 'g an')": 78,
+    "(1.0, 'g uo')": 2,
+    "(1.0, 'h ai')": 13,
+    "(1.0, 'h u')": 8,
+    "(1.0, 'j ie')": 21,
+    "(1.0, 'k an')": 2,
+    "(1.0, 'l e')": 39,
+    "(1.0, 'l i')": 7,
+    "(1.0, 'l ie')": 27,
+    "(1.0, 'l ou')": 67,
+    "(1.0, 'm ei')": 28,
+    "(1.0, 'n a')": 22,
+    "(1.0, 'n ai')": 48,
+    "(1.0, 'p an')": 19,
+    "(1.0, 'q i')": 9,
+    "(1.0, 'q ing')": 12,
+    "(1.0, 'r ang')": 70,
+    "(1.0, 'r en')": 26,
+    "(1.0, 's ii')": 21,
+    "(1.0, 's uo')": 18,
+    "(1.0, 'sh ao')": 20,
+    "(1.0, 'sh iii')": 29,
+    "(1.0, 't a')": 3,
+    "(1.0, 't ai')": 1,
+    "(1.0, 't ing')": 7,
+    "(1.0, 't ou')": 55,
+    "(1.0, 't u')": 2,
+    "(1.0, 'w uei')": 19,
+    "(1.0, 'x i')": 5,
+    "(1.0, 'y ie')": 51,
+    "(1.0, 'y iou')": 50,
+    "(1.0, 'zh ao')": 5,
+    "(1.0, 'zh e')": 5,
+    "(1.0, 'zh iii')": 4,
+    "(1.0, 'zh ong')": 36,
+    "(1.0, 'zh uen')": 8
+  },
+  "vuv_run_lengths": {
+    "1.0": {
+      "count": 135,
+      "min": 1.0,
+      "p05": 7.4,
+      "p25": 26.5,
+      "median": 47.0,
+      "p75": 85.5,
+      "p95": 208.3,
+      "p99": 237.94,
+      "max": 298.0
+    },
+    "0.0": {
+      "count": 94,
+      "min": 1.0,
+      "p05": 1.65,
+      "p25": 8.0,
+      "median": 13.0,
+      "p75": 26.75,
+      "p95": 52.5,
+      "p99": 103.0,
+      "max": 103.0
+    }
+  },
+  "visible_uuid_reuse": {
+    "unique": 4552,
+    "reused": 49,
+    "examples": [
+      {
+        "uuid": "{acc46750-2d25-4f96-b429-1716954236b9}",
+        "occurrences": [
+          [
+            3,
+            16,
+            110682,
+            173,
+            63
+          ],
+          [
+            3,
+            19,
+            110682,
+            173,
+            63
+          ]
+        ]
+      },
+      {
+        "uuid": "{53916a89-2d3e-4d5d-90f3-9d28fa25dab1}",
+        "occurrences": [
+          [
+            3,
+            16,
+            110855,
+            34,
+            64
+          ],
+          [
+            3,
+            19,
+            110855,
+            34,
+            64
+          ]
+        ]
+      },
+      {
+        "uuid": "{69126696-8b17-4a3d-8b23-e1021c577efe}",
+        "occurrences": [
+          [
+            3,
+            16,
+            110889,
+            81,
+            62
+          ],
+          [
+            3,
+            19,
+            110889,
+            81,
+            62
+          ]
+        ]
+      },
+      {
+        "uuid": "{e30fb627-d5a9-4ced-be0b-d8497f644301}",
+        "occurrences": [
+          [
+            3,
+            16,
+            110970,
+            134,
+            61
+          ],
+          [
+            3,
+            19,
+            110970,
+            134,
+            61
+          ]
+        ]
+      },
+      {
+        "uuid": "{cff9e91e-b09a-4415-944b-1a24b864027d}",
+        "occurrences": [
+          [
+            3,
+            16,
+            111104,
+            231,
+            57
+          ],
+          [
+            3,
+            19,
+            111104,
+            231,
+            57
+          ]
+        ]
+      },
+      {
+        "uuid": "{c4d18503-af04-45db-81f8-9983c610df19}",
+        "occurrences": [
+          [
+            3,
+            16,
+            111345,
+            54,
+            57
+          ],
+          [
+            3,
+            19,
+            111345,
+            54,
+            57
+          ]
+        ]
+      },
+      {
+        "uuid": "{404b4aff-22bf-4142-8924-ec6cb22fe5f2}",
+        "occurrences": [
+          [
+            3,
+            16,
+            111399,
+            81,
+            53
+          ],
+          [
+            3,
+            19,
+            111399,
+            81,
+            53
+          ]
+        ]
+      },
+      {
+        "uuid": "{9cccc102-48e6-456c-b803-9567bc85e8cc}",
+        "occurrences": [
+          [
+            3,
+            16,
+            111480,
+            210,
+            54
+          ],
+          [
+            3,
+            19,
+            111480,
+            210,
+            54
+          ]
+        ]
+      },
+      {
+        "uuid": "{78a85a4b-52c5-4a2f-88b9-eabc4443b6d3}",
+        "occurrences": [
+          [
+            3,
+            16,
+            112083,
+            106,
+            49
+          ],
+          [
+            3,
+            19,
+            112083,
+            106,
+            49
+          ]
+        ]
+      },
+      {
+        "uuid": "{20b8967c-c91e-4cc3-8616-4ee9cd60b9fc}",
+        "occurrences": [
+          [
+            3,
+            16,
+            112189,
+            173,
+            65
+          ],
+          [
+            3,
+            19,
+            112189,
+            173,
+            65
+          ]
+        ]
+      },
+      {
+        "uuid": "{25f8928e-9814-41f6-a19b-f6a5ed3bc149}",
+        "occurrences": [
+          [
+            3,
+            16,
+            112362,
+            183,
+            60
+          ],
+          [
+            3,
+            19,
+            112362,
+            183,
+            60
+          ]
+        ]
+      },
+      {
+        "uuid": "{93f38799-36de-4d07-ab98-4e2749062374}",
+        "occurrences": [
+          [
+            3,
+            16,
+            112560,
+            96,
+            56
+          ],
+          [
+            3,
+            19,
+            112560,
+            96,
+            56
+          ]
+        ]
+      }
+    ]
+  },
+  "examples": {
+    "(0.0, 'other_numeric', 'gap')": [
+      {
+        "track": 0,
+        "pattern": 0,
+        "pattern_uuid": "{ebb1ed93-0b7a-4ec6-ba31-9e6370ddbcd9}",
+        "tick": 3124,
+        "vuv_curve": 0,
+        "pitch_curve": 0,
+        "vuv": 0.0,
+        "delta": -0.9615402221679688,
+        "nearest_scaffold": 63.0,
+        "public_smoothed_base": 63.000000000000014,
+        "public_base_plus_delta": 62.038459777832045,
+        "timing_category": "gap",
+        "note": null,
+        "head_window_notes": []
+      },
+      {
+        "track": 0,
+        "pattern": 0,
+        "pattern_uuid": "{ebb1ed93-0b7a-4ec6-ba31-9e6370ddbcd9}",
+        "tick": 3125,
+        "vuv_curve": 0,
+        "pitch_curve": 0,
+        "vuv": 0.0,
+        "delta": -1.0384597778320312,
+        "nearest_scaffold": 63.0,
+        "public_smoothed_base": 63.000000000000014,
+        "public_base_plus_delta": 61.96154022216798,
+        "timing_category": "gap",
+        "note": null,
+        "head_window_notes": []
+      },
+      {
+        "track": 0,
+        "pattern": 0,
+        "pattern_uuid": "{ebb1ed93-0b7a-4ec6-ba31-9e6370ddbcd9}",
+        "tick": 3126,
+        "vuv_curve": 0,
+        "pitch_curve": 0,
+        "vuv": 0.0,
+        "delta": -1.0384597778320312,
+        "nearest_scaffold": 63.0,
+        "public_smoothed_base": 63.000000000000014,
+        "public_base_plus_delta": 61.96154022216798,
+        "timing_category": "gap",
+        "note": null,
+        "head_window_notes": []
+      }
+    ],
+    "(0.0, 'other_numeric', 'inside_note')": [
+      {
+        "track": 0,
+        "pattern": 12,
+        "pattern_uuid": "{f46a3aad-9b4d-4c3d-8f36-b460217ca287}",
+        "tick": 170813,
+        "vuv_curve": 14,
+        "pitch_curve": 39,
+        "vuv": 0.0,
+        "delta": -7.021368026733398,
+        "nearest_scaffold": 55.0,
+        "public_smoothed_base": 55.000000000000014,
+        "public_base_plus_delta": 47.978631973266616,
+        "timing_category": "inside_note",
+        "note": {
+          "uuid": "{d904ad30-8506-466d-81ab-660a712ce905}",
+          "pos": 170701,
+          "dur": 194,
+          "pitch": 55,
+          "extraInfo": {},
+          "lyric": "gai",
+          "language": "CHN",
+          "headConsonants": [
+            0.06999999999999318
+          ],
+          "tailConsonants": [],
+          "brLen": 0.0,
+          "syllable": "g ai",
+          "freezedDefaultSyllable": "g ai"
+        },
+        "head_window_notes": []
+      },
+      {
+        "track": 0,
+        "pattern": 12,
+        "pattern_uuid": "{f46a3aad-9b4d-4c3d-8f36-b460217ca287}",
+        "tick": 170814,
+        "vuv_curve": 14,
+        "pitch_curve": 39,
+        "vuv": 0.0,
+        "delta": -7.150886058807373,
+        "nearest_scaffold": 55.0,
+        "public_smoothed_base": 55.000000000000014,
+        "public_base_plus_delta": 47.84911394119264,
+        "timing_category": "inside_note",
+        "note": {
+          "uuid": "{d904ad30-8506-466d-81ab-660a712ce905}",
+          "pos": 170701,
+          "dur": 194,
+          "pitch": 55,
+          "extraInfo": {},
+          "lyric": "gai",
+          "language": "CHN",
+          "headConsonants": [
+            0.06999999999999318
+          ],
+          "tailConsonants": [],
+          "brLen": 0.0,
+          "syllable": "g ai",
+          "freezedDefaultSyllable": "g ai"
+        },
+        "head_window_notes": []
+      },
+      {
+        "track": 0,
+        "pattern": 12,
+        "pattern_uuid": "{f46a3aad-9b4d-4c3d-8f36-b460217ca287}",
+        "tick": 170815,
+        "vuv_curve": 14,
+        "pitch_curve": 39,
+        "vuv": 0.0,
+        "delta": -7.25147819519043,
+        "nearest_scaffold": 55.0,
+        "public_smoothed_base": 55.000000000000014,
+        "public_base_plus_delta": 47.748521804809585,
+        "timing_category": "inside_note",
+        "note": {
+          "uuid": "{d904ad30-8506-466d-81ab-660a712ce905}",
+          "pos": 170701,
+          "dur": 194,
+          "pitch": 55,
+          "extraInfo": {},
+          "lyric": "gai",
+          "language": "CHN",
+          "headConsonants": [
+            0.06999999999999318
+          ],
+          "tailConsonants": [],
+          "brLen": 0.0,
+          "syllable": "g ai",
+          "freezedDefaultSyllable": "g ai"
+        },
+        "head_window_notes": []
+      }
+    ],
+    "(0.0, 'other_numeric', 'leading_consonant_window')": [
+      {
+        "track": 0,
+        "pattern": 0,
+        "pattern_uuid": "{ebb1ed93-0b7a-4ec6-ba31-9e6370ddbcd9}",
+        "tick": 11243,
+        "vuv_curve": 4,
+        "pitch_curve": 2,
+        "vuv": 0.0,
+        "delta": -2.120511293411255,
+        "nearest_scaffold": 64.0,
+        "public_smoothed_base": 64.00000000000001,
+        "public_base_plus_delta": 61.87948870658876,
+        "timing_category": "leading_consonant_window",
+        "note": null,
+        "head_window_notes": [
+          {
+            "index": 35,
+            "lyric": "luo",
+            "syllable": "",
+            "headConsonants": [
+              0.0522448979591843
+            ]
+          }
+        ]
+      },
+      {
+        "track": 0,
+        "pattern": 0,
+        "pattern_uuid": "{ebb1ed93-0b7a-4ec6-ba31-9e6370ddbcd9}",
+        "tick": 11244,
+        "vuv_curve": 4,
+        "pitch_curve": 2,
+        "vuv": 0.0,
+        "delta": -2.1153831481933594,
+        "nearest_scaffold": 64.0,
+        "public_smoothed_base": 64.00000000000001,
+        "public_base_plus_delta": 61.884616851806655,
+        "timing_category": "leading_consonant_window",
+        "note": null,
+        "head_window_notes": [
+          {
+            "index": 35,
+            "lyric": "luo",
+            "syllable": "",
+            "headConsonants": [
+              0.0522448979591843
+            ]
+          }
+        ]
+      },
+      {
+        "track": 0,
+        "pattern": 0,
+        "pattern_uuid": "{ebb1ed93-0b7a-4ec6-ba31-9e6370ddbcd9}",
+        "tick": 11245,
+        "vuv_curve": 4,
+        "pitch_curve": 2,
+        "vuv": 0.0,
+        "delta": -2.0948703289031982,
+        "nearest_scaffold": 64.0,
+        "public_smoothed_base": 64.00000000000001,
+        "public_base_plus_delta": 61.905129671096816,
+        "timing_category": "leading_consonant_window",
+        "note": null,
+        "head_window_notes": [
+          {
+            "index": 35,
+            "lyric": "luo",
+            "syllable": "",
+            "headConsonants": [
+              0.0522448979591843
+            ]
+          }
+        ]
+      }
+    ],
+    "(1.0, 'other_numeric', 'gap')": [
+      {
+        "track": 0,
+        "pattern": 0,
+        "pattern_uuid": "{ebb1ed93-0b7a-4ec6-ba31-9e6370ddbcd9}",
+        "tick": 3123,
+        "vuv_curve": 0,
+        "pitch_curve": 0,
+        "vuv": 1.0,
+        "delta": -0.9615402221679688,
+        "nearest_scaffold": 63.0,
+        "public_smoothed_base": 63.000000000000014,
+        "public_base_plus_delta": 62.038459777832045,
+        "timing_category": "gap",
+        "note": null,
+        "head_window_notes": []
+      },
+      {
+        "track": 0,
+        "pattern": 0,
+        "pattern_uuid": "{ebb1ed93-0b7a-4ec6-ba31-9e6370ddbcd9}",
+        "tick": 8106,
+        "vuv_curve": 2,
+        "pitch_curve": 1,
+        "vuv": 1.0,
+        "delta": 5.961540222167969,
+        "nearest_scaffold": 53.0,
+        "public_smoothed_base": 53.000000000000014,
+        "public_base_plus_delta": 58.96154022216798,
+        "timing_category": "gap",
+        "note": null,
+        "head_window_notes": []
+      },
+      {
+        "track": 0,
+        "pattern": 0,
+        "pattern_uuid": "{ebb1ed93-0b7a-4ec6-ba31-9e6370ddbcd9}",
+        "tick": 15181,
+        "vuv_curve": 5,
+        "pitch_curve": 4,
+        "vuv": 1.0,
+        "delta": 1.8461551666259766,
+        "nearest_scaffold": 53.0,
+        "public_smoothed_base": 53.000000000000014,
+        "public_base_plus_delta": 54.84615516662599,
+        "timing_category": "gap",
+        "note": null,
+        "head_window_notes": []
+      }
+    ],
+    "(1.0, 'other_numeric', 'inside_note')": [
+      {
+        "track": 0,
+        "pattern": 0,
+        "pattern_uuid": "{ebb1ed93-0b7a-4ec6-ba31-9e6370ddbcd9}",
+        "tick": 3073,
+        "vuv_curve": 0,
+        "pitch_curve": 0,
+        "vuv": 1.0,
+        "delta": -0.03845977783203125,
+        "nearest_scaffold": 63.0,
+        "public_smoothed_base": 63.000000000000014,
+        "public_base_plus_delta": 62.96154022216798,
+        "timing_category": "inside_note",
+        "note": {
+          "uuid": "{cd128b17-847d-4fec-94b0-fa3f0a052a2c}",
+          "pos": 2922,
+          "dur": 201,
+          "pitch": 63,
+          "extraInfo": {},
+          "lyric": "yang",
+          "language": "CHN",
+          "headConsonants": [
+            0.04999999999999982
+          ],
+          "tailConsonants": [],
+          "brLen": 0.0,
+          "syllable": "y iang",
+          "freezedDefaultSyllable": "y iang"
+        },
+        "head_window_notes": []
+      },
+      {
+        "track": 0,
+        "pattern": 0,
+        "pattern_uuid": "{ebb1ed93-0b7a-4ec6-ba31-9e6370ddbcd9}",
+        "tick": 3074,
+        "vuv_curve": 0,
+        "pitch_curve": 0,
+        "vuv": 1.0,
+        "delta": -0.03845977783203125,
+        "nearest_scaffold": 63.0,
+        "public_smoothed_base": 63.000000000000014,
+        "public_base_plus_delta": 62.96154022216798,
+        "timing_category": "inside_note",
+        "note": {
+          "uuid": "{cd128b17-847d-4fec-94b0-fa3f0a052a2c}",
+          "pos": 2922,
+          "dur": 201,
+          "pitch": 63,
+          "extraInfo": {},
+          "lyric": "yang",
+          "language": "CHN",
+          "headConsonants": [
+            0.04999999999999982
+          ],
+          "tailConsonants": [],
+          "brLen": 0.0,
+          "syllable": "y iang",
+          "freezedDefaultSyllable": "y iang"
+        },
+        "head_window_notes": []
+      },
+      {
+        "track": 0,
+        "pattern": 0,
+        "pattern_uuid": "{ebb1ed93-0b7a-4ec6-ba31-9e6370ddbcd9}",
+        "tick": 3075,
+        "vuv_curve": 0,
+        "pitch_curve": 0,
+        "vuv": 1.0,
+        "delta": -0.032049816101789474,
+        "nearest_scaffold": 63.0,
+        "public_smoothed_base": 63.000000000000014,
+        "public_base_plus_delta": 62.967950183898225,
+        "timing_category": "inside_note",
+        "note": {
+          "uuid": "{cd128b17-847d-4fec-94b0-fa3f0a052a2c}",
+          "pos": 2922,
+          "dur": 201,
+          "pitch": 63,
+          "extraInfo": {},
+          "lyric": "yang",
+          "language": "CHN",
+          "headConsonants": [
+            0.04999999999999982
+          ],
+          "tailConsonants": [],
+          "brLen": 0.0,
+          "syllable": "y iang",
+          "freezedDefaultSyllable": "y iang"
+        },
+        "head_window_notes": []
+      }
+    ],
+    "(1.0, 'other_numeric', 'leading_consonant_window')": [
+      {
+        "track": 0,
+        "pattern": 0,
+        "pattern_uuid": "{ebb1ed93-0b7a-4ec6-ba31-9e6370ddbcd9}",
+        "tick": 6753,
+        "vuv_curve": 1,
+        "pitch_curve": 1,
+        "vuv": 1.0,
+        "delta": 0.4230766296386719,
+        "nearest_scaffold": 59.0,
+        "public_smoothed_base": 59.000000000000014,
+        "public_base_plus_delta": 59.423076629638686,
+        "timing_category": "leading_consonant_window",
+        "note": {
+          "uuid": "{2af4d7fb-7e24-4e5a-95a3-99362d2c8493}",
+          "pos": 6560,
+          "dur": 231,
+          "pitch": 59,
+          "extraInfo": {},
+          "lyric": "qian",
+          "language": "CHN",
+          "headConsonants": [
+            0.1200000000000001
+          ],
+          "tailConsonants": [],
+          "brLen": 0.0,
+          "syllable": "q ian",
+          "freezedDefaultSyllable": "q ian"
+        },
+        "head_window_notes": [
+          {
+            "index": 13,
+            "lyric": "bu",
+            "syllable": "b u",
+            "headConsonants": [
+              0.040000000000000036
+            ]
+          }
+        ]
+      },
+      {
+        "track": 0,
+        "pattern": 0,
+        "pattern_uuid": "{ebb1ed93-0b7a-4ec6-ba31-9e6370ddbcd9}",
+        "tick": 6754,
+        "vuv_curve": 1,
+        "pitch_curve": 1,
+        "vuv": 1.0,
+        "delta": 0.4230766296386719,
+        "nearest_scaffold": 59.0,
+        "public_smoothed_base": 59.000000000000014,
+        "public_base_plus_delta": 59.423076629638686,
+        "timing_category": "leading_consonant_window",
+        "note": {
+          "uuid": "{2af4d7fb-7e24-4e5a-95a3-99362d2c8493}",
+          "pos": 6560,
+          "dur": 231,
+          "pitch": 59,
+          "extraInfo": {},
+          "lyric": "qian",
+          "language": "CHN",
+          "headConsonants": [
+            0.1200000000000001
+          ],
+          "tailConsonants": [],
+          "brLen": 0.0,
+          "syllable": "q ian",
+          "freezedDefaultSyllable": "q ian"
+        },
+        "head_window_notes": [
+          {
+            "index": 13,
+            "lyric": "bu",
+            "syllable": "b u",
+            "headConsonants": [
+              0.040000000000000036
+            ]
+          }
+        ]
+      },
+      {
+        "track": 0,
+        "pattern": 0,
+        "pattern_uuid": "{ebb1ed93-0b7a-4ec6-ba31-9e6370ddbcd9}",
+        "tick": 6755,
+        "vuv_curve": 1,
+        "pitch_curve": 1,
+        "vuv": 1.0,
+        "delta": 0.4230766296386719,
+        "nearest_scaffold": 59.0,
+        "public_smoothed_base": 59.000000000000014,
+        "public_base_plus_delta": 59.423076629638686,
+        "timing_category": "leading_consonant_window",
+        "note": {
+          "uuid": "{2af4d7fb-7e24-4e5a-95a3-99362d2c8493}",
+          "pos": 6560,
+          "dur": 231,
+          "pitch": 59,
+          "extraInfo": {},
+          "lyric": "qian",
+          "language": "CHN",
+          "headConsonants": [
+            0.1200000000000001
+          ],
+          "tailConsonants": [],
+          "brLen": 0.0,
+          "syllable": "q ian",
+          "freezedDefaultSyllable": "q ian"
+        },
+        "head_window_notes": [
+          {
+            "index": 13,
+            "lyric": "bu",
+            "syllable": "b u",
+            "headConsonants": [
+              0.040000000000000036
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "patterns_with_visible_vuv": [
+    {
+      "track": 0,
+      "pattern": 0,
+      "pattern_uuid": "{ebb1ed93-0b7a-4ec6-ba31-9e6370ddbcd9}",
+      "visible": [
+        0.0,
+        33600.0
+      ],
+      "pitch_samples": 30210,
+      "vuv_samples": 349,
+      "flags": {
+        "1.0": 268,
+        "0.0": 81
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 65,
+        "(1.0, 'other_numeric')": 268
+      },
+      "runs": [
+        {
+          "begin": 3073,
+          "end": 3124,
+          "value": 1.0
+        },
+        {
+          "begin": 3124,
+          "end": 3156,
+          "value": 0.0
+        },
+        {
+          "begin": 6728,
+          "end": 6760,
+          "value": 1.0
+        },
+        {
+          "begin": 8092,
+          "end": 8107,
+          "value": 1.0
+        },
+        {
+          "begin": 8107,
+          "end": 8116,
+          "value": 0.0
+        },
+        {
+          "begin": 10886,
+          "end": 10933,
+          "value": 1.0
+        },
+        {
+          "begin": 11226,
+          "end": 11253,
+          "value": 0.0
+        },
+        {
+          "begin": 11253,
+          "end": 11297,
+          "value": 1.0
+        },
+        {
+          "begin": 15177,
+          "end": 15182,
+          "value": 1.0
+        },
+        {
+          "begin": 15182,
+          "end": 15195,
+          "value": 0.0
+        },
+        {
+          "begin": 21524,
+          "end": 21598,
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "track": 0,
+      "pattern": 1,
+      "pattern_uuid": "{f548e52c-66f9-4e95-a695-c91a289078bb}",
+      "visible": [
+        0.0,
+        96023.0
+      ],
+      "pitch_samples": 89572,
+      "vuv_samples": 745,
+      "flags": {
+        "0.0": 103,
+        "1.0": 642
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 103,
+        "(1.0, 'other_numeric')": 595
+      },
+      "runs": [
+        {
+          "begin": 13998,
+          "end": 14000,
+          "value": 0.0
+        },
+        {
+          "begin": 14000,
+          "end": 14118,
+          "value": 1.0
+        },
+        {
+          "begin": 17731,
+          "end": 17737,
+          "value": 1.0
+        },
+        {
+          "begin": 17737,
+          "end": 17742,
+          "value": 0.0
+        },
+        {
+          "begin": 22486,
+          "end": 22554,
+          "value": 1.0
+        },
+        {
+          "begin": 22554,
+          "end": 22564,
+          "value": 0.0
+        },
+        {
+          "begin": 34081,
+          "end": 34106,
+          "value": 1.0
+        },
+        {
+          "begin": 34106,
+          "end": 34120,
+          "value": 0.0
+        },
+        {
+          "begin": 47605,
+          "end": 47631,
+          "value": 1.0
+        },
+        {
+          "begin": 47631,
+          "end": 47633,
+          "value": 0.0
+        },
+        {
+          "begin": 60092,
+          "end": 60139,
+          "value": 1.0
+        },
+        {
+          "begin": 60139,
+          "end": 60145,
+          "value": 0.0
+        },
+        {
+          "begin": 62679,
+          "end": 62725,
+          "value": 1.0
+        },
+        {
+          "begin": 68336,
+          "end": 68401,
+          "value": 1.0
+        },
+        {
+          "begin": 68401,
+          "end": 68460,
+          "value": 0.0
+        },
+        {
+          "begin": 78142,
+          "end": 78147,
+          "value": 0.0
+        },
+        {
+          "begin": 78147,
+          "end": 78388,
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "track": 0,
+      "pattern": 2,
+      "pattern_uuid": "{53265272-4ee4-4e1c-8608-059f18b61cd4}",
+      "visible": [
+        0.0,
+        28800.0
+      ],
+      "pitch_samples": 26340,
+      "vuv_samples": 254,
+      "flags": {
+        "1.0": 223,
+        "0.0": 31
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 31,
+        "(1.0, 'other_numeric')": 223
+      },
+      "runs": [
+        {
+          "begin": 4440,
+          "end": 4483,
+          "value": 1.0
+        },
+        {
+          "begin": 4576,
+          "end": 4615,
+          "value": 1.0
+        },
+        {
+          "begin": 4615,
+          "end": 4627,
+          "value": 0.0
+        },
+        {
+          "begin": 6480,
+          "end": 6519,
+          "value": 1.0
+        },
+        {
+          "begin": 6528,
+          "end": 6598,
+          "value": 1.0
+        },
+        {
+          "begin": 6598,
+          "end": 6605,
+          "value": 0.0
+        },
+        {
+          "begin": 8667,
+          "end": 8699,
+          "value": 1.0
+        },
+        {
+          "begin": 8699,
+          "end": 8711,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 0,
+      "pattern": 5,
+      "pattern_uuid": "{1af12f0f-abc8-4493-a709-6fb797b15c66}",
+      "visible": [
+        0.0,
+        7200.0
+      ],
+      "pitch_samples": 5946,
+      "vuv_samples": 240,
+      "flags": {
+        "1.0": 197,
+        "0.0": 43
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 43,
+        "(1.0, 'other_numeric')": 197
+      },
+      "runs": [
+        {
+          "begin": 1879,
+          "end": 1927,
+          "value": 1.0
+        },
+        {
+          "begin": 1927,
+          "end": 1940,
+          "value": 0.0
+        },
+        {
+          "begin": 2598,
+          "end": 2619,
+          "value": 1.0
+        },
+        {
+          "begin": 2619,
+          "end": 2630,
+          "value": 0.0
+        },
+        {
+          "begin": 2970,
+          "end": 3026,
+          "value": 1.0
+        },
+        {
+          "begin": 3026,
+          "end": 3036,
+          "value": 0.0
+        },
+        {
+          "begin": 3656,
+          "end": 3728,
+          "value": 1.0
+        },
+        {
+          "begin": 3728,
+          "end": 3737,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 0,
+      "pattern": 6,
+      "pattern_uuid": "{5c6e1dbd-e161-4a4c-8b35-f8f3f875265b}",
+      "visible": [
+        46380.0,
+        53760.0
+      ],
+      "pitch_samples": 6916,
+      "vuv_samples": 68,
+      "flags": {
+        "1.0": 51,
+        "0.0": 17
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 17,
+        "(1.0, 'other_numeric')": 51
+      },
+      "runs": [
+        {
+          "begin": 49623,
+          "end": 49674,
+          "value": 1.0
+        },
+        {
+          "begin": 49674,
+          "end": 49691,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 0,
+      "pattern": 7,
+      "pattern_uuid": "{1620ebfd-6f78-4191-9f51-b194ac211857}",
+      "visible": [
+        66480.0,
+        70773.0
+      ],
+      "pitch_samples": 3879,
+      "vuv_samples": 48,
+      "flags": {
+        "0.0": 17,
+        "1.0": 31
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 17,
+        "(1.0, 'other_numeric')": 31
+      },
+      "runs": [
+        {
+          "begin": 69493,
+          "end": 69510,
+          "value": 0.0
+        },
+        {
+          "begin": 69510,
+          "end": 69541,
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "track": 0,
+      "pattern": 8,
+      "pattern_uuid": "{241c8f47-6d98-408f-80c3-bfc9915e25ab}",
+      "visible": [
+        104853.0,
+        118773.0
+      ],
+      "pitch_samples": 13252,
+      "vuv_samples": 131,
+      "flags": {
+        "1.0": 124,
+        "0.0": 7
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 7,
+        "(1.0, 'other_numeric')": 124
+      },
+      "runs": [
+        {
+          "begin": 105410,
+          "end": 105492,
+          "value": 1.0
+        },
+        {
+          "begin": 105492,
+          "end": 105499,
+          "value": 0.0
+        },
+        {
+          "begin": 114763,
+          "end": 114805,
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "track": 0,
+      "pattern": 12,
+      "pattern_uuid": "{f46a3aad-9b4d-4c3d-8f36-b460217ca287}",
+      "visible": [
+        129600.0,
+        184080.0
+      ],
+      "pitch_samples": 50308,
+      "vuv_samples": 277,
+      "flags": {
+        "1.0": 209,
+        "0.0": 68
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 68,
+        "(1.0, 'other_numeric')": 209
+      },
+      "runs": [
+        {
+          "begin": 145179,
+          "end": 145204,
+          "value": 1.0
+        },
+        {
+          "begin": 145204,
+          "end": 145222,
+          "value": 0.0
+        },
+        {
+          "begin": 162229,
+          "end": 162302,
+          "value": 1.0
+        },
+        {
+          "begin": 162302,
+          "end": 162319,
+          "value": 0.0
+        },
+        {
+          "begin": 170811,
+          "end": 170813,
+          "value": 1.0
+        },
+        {
+          "begin": 170813,
+          "end": 170833,
+          "value": 0.0
+        },
+        {
+          "begin": 179692,
+          "end": 179783,
+          "value": 1.0
+        },
+        {
+          "begin": 179783,
+          "end": 179795,
+          "value": 0.0
+        },
+        {
+          "begin": 180000,
+          "end": 180001,
+          "value": 0.0
+        },
+        {
+          "begin": 180001,
+          "end": 180019,
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "track": 0,
+      "pattern": 13,
+      "pattern_uuid": "{cc879833-d5a6-48d0-b74a-6080db182e9c}",
+      "visible": [
+        0.0,
+        39360.0
+      ],
+      "pitch_samples": 37390,
+      "vuv_samples": 281,
+      "flags": {
+        "1.0": 268,
+        "0.0": 13
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 13,
+        "(1.0, 'other_numeric')": 268
+      },
+      "runs": [
+        {
+          "begin": 3405,
+          "end": 3633,
+          "value": 1.0
+        },
+        {
+          "begin": 3754,
+          "end": 3778,
+          "value": 1.0
+        },
+        {
+          "begin": 21658,
+          "end": 21664,
+          "value": 1.0
+        },
+        {
+          "begin": 21664,
+          "end": 21676,
+          "value": 0.0
+        },
+        {
+          "begin": 37040,
+          "end": 37050,
+          "value": 1.0
+        },
+        {
+          "begin": 37050,
+          "end": 37051,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 0,
+      "pattern": 14,
+      "pattern_uuid": "{27a20695-0380-4821-a9cf-4c411520bfb3}",
+      "visible": [
+        57427.0,
+        60240.0
+      ],
+      "pitch_samples": 2813,
+      "vuv_samples": 53,
+      "flags": {
+        "1.0": 41,
+        "0.0": 12
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 12,
+        "(1.0, 'other_numeric')": 41
+      },
+      "runs": [
+        {
+          "begin": 59847,
+          "end": 59888,
+          "value": 1.0
+        },
+        {
+          "begin": 59888,
+          "end": 59900,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 0,
+      "pattern": 15,
+      "pattern_uuid": "{ae9879e8-ac42-42ab-9325-146c90b81892}",
+      "visible": [
+        3840.0,
+        17280.0
+      ],
+      "pitch_samples": 11414,
+      "vuv_samples": 71,
+      "flags": {
+        "1.0": 45,
+        "0.0": 26
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 26,
+        "(1.0, 'other_numeric')": 45
+      },
+      "runs": [
+        {
+          "begin": 5386,
+          "end": 5431,
+          "value": 1.0
+        },
+        {
+          "begin": 5431,
+          "end": 5457,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 0,
+      "pattern": 20,
+      "pattern_uuid": "{c9c7ed67-e0af-4e4a-abff-c27868c9ec21}",
+      "visible": [
+        67200.0,
+        71040.0
+      ],
+      "pitch_samples": 3533,
+      "vuv_samples": 67,
+      "flags": {
+        "0.0": 5,
+        "1.0": 62
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 5,
+        "(1.0, 'other_numeric')": 62
+      },
+      "runs": [
+        {
+          "begin": 69182,
+          "end": 69187,
+          "value": 0.0
+        },
+        {
+          "begin": 69187,
+          "end": 69249,
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "track": 0,
+      "pattern": 21,
+      "pattern_uuid": "{abfeeeb1-0b45-435d-9492-a35ddd2e6d74}",
+      "visible": [
+        0.0,
+        5760.0
+      ],
+      "pitch_samples": 4986,
+      "vuv_samples": 54,
+      "flags": {
+        "1.0": 39,
+        "0.0": 15
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 15,
+        "(1.0, 'other_numeric')": 39
+      },
+      "runs": [
+        {
+          "begin": 3038,
+          "end": 3077,
+          "value": 1.0
+        },
+        {
+          "begin": 3077,
+          "end": 3092,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 1,
+      "pattern": 0,
+      "pattern_uuid": "{ff144277-6681-49d9-93e2-e609c2de7a38}",
+      "visible": [
+        71.0,
+        42426.0
+      ],
+      "pitch_samples": 37088,
+      "vuv_samples": 187,
+      "flags": {
+        "1.0": 168,
+        "0.0": 19
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 19,
+        "(1.0, 'other_numeric')": 168
+      },
+      "runs": [
+        {
+          "begin": 15883,
+          "end": 15967,
+          "value": 1.0
+        },
+        {
+          "begin": 16192,
+          "end": 16276,
+          "value": 1.0
+        },
+        {
+          "begin": 16276,
+          "end": 16295,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 1,
+      "pattern": 1,
+      "pattern_uuid": "{f1f8c748-ea6c-430c-9344-892f76676528}",
+      "visible": [
+        0.0,
+        99179.0
+      ],
+      "pitch_samples": 92076,
+      "vuv_samples": 1212,
+      "flags": {
+        "1.0": 1019,
+        "0.0": 193
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 150,
+        "(1.0, 'other_numeric')": 988
+      },
+      "runs": [
+        {
+          "begin": 2498,
+          "end": 2581,
+          "value": 1.0
+        },
+        {
+          "begin": 2581,
+          "end": 2582,
+          "value": 0.0
+        },
+        {
+          "begin": 9028,
+          "end": 9070,
+          "value": 1.0
+        },
+        {
+          "begin": 9183,
+          "end": 9221,
+          "value": 1.0
+        },
+        {
+          "begin": 9221,
+          "end": 9264,
+          "value": 0.0
+        },
+        {
+          "begin": 9270,
+          "end": 9301,
+          "value": 1.0
+        },
+        {
+          "begin": 9301,
+          "end": 9344,
+          "value": 0.0
+        },
+        {
+          "begin": 11387,
+          "end": 11402,
+          "value": 1.0
+        },
+        {
+          "begin": 12891,
+          "end": 12924,
+          "value": 1.0
+        },
+        {
+          "begin": 14976,
+          "end": 15035,
+          "value": 1.0
+        },
+        {
+          "begin": 24520,
+          "end": 24540,
+          "value": 1.0
+        },
+        {
+          "begin": 30348,
+          "end": 30539,
+          "value": 1.0
+        },
+        {
+          "begin": 30539,
+          "end": 30582,
+          "value": 0.0
+        },
+        {
+          "begin": 30582,
+          "end": 30629,
+          "value": 1.0
+        },
+        {
+          "begin": 43458,
+          "end": 43484,
+          "value": 1.0
+        },
+        {
+          "begin": 43484,
+          "end": 43508,
+          "value": 0.0
+        },
+        {
+          "begin": 47518,
+          "end": 47611,
+          "value": 1.0
+        },
+        {
+          "begin": 57331,
+          "end": 57379,
+          "value": 1.0
+        },
+        {
+          "begin": 57452,
+          "end": 57544,
+          "value": 1.0
+        },
+        {
+          "begin": 57571,
+          "end": 57600,
+          "value": 1.0
+        },
+        {
+          "begin": 57735,
+          "end": 57748,
+          "value": 1.0
+        },
+        {
+          "begin": 57749,
+          "end": 57765,
+          "value": 1.0
+        },
+        {
+          "begin": 75885,
+          "end": 75895,
+          "value": 1.0
+        },
+        {
+          "begin": 75918,
+          "end": 75941,
+          "value": 1.0
+        },
+        {
+          "begin": 75941,
+          "end": 75967,
+          "value": 0.0
+        },
+        {
+          "begin": 96922,
+          "end": 97032,
+          "value": 1.0
+        },
+        {
+          "begin": 97032,
+          "end": 97045,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 1,
+      "pattern": 3,
+      "pattern_uuid": "{aba0d46e-d188-4c9a-94ed-d5e112cdb86d}",
+      "visible": [
+        79680.0,
+        154800.0
+      ],
+      "pitch_samples": 73135,
+      "vuv_samples": 499,
+      "flags": {
+        "1.0": 451,
+        "0.0": 48
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 48,
+        "(1.0, 'other_numeric')": 451
+      },
+      "runs": [
+        {
+          "begin": 96168,
+          "end": 96204,
+          "value": 1.0
+        },
+        {
+          "begin": 96204,
+          "end": 96223,
+          "value": 0.0
+        },
+        {
+          "begin": 99285,
+          "end": 99312,
+          "value": 1.0
+        },
+        {
+          "begin": 99312,
+          "end": 99314,
+          "value": 0.0
+        },
+        {
+          "begin": 115696,
+          "end": 115740,
+          "value": 1.0
+        },
+        {
+          "begin": 115740,
+          "end": 115748,
+          "value": 0.0
+        },
+        {
+          "begin": 122886,
+          "end": 122987,
+          "value": 1.0
+        },
+        {
+          "begin": 133530,
+          "end": 133732,
+          "value": 1.0
+        },
+        {
+          "begin": 146776,
+          "end": 146817,
+          "value": 1.0
+        },
+        {
+          "begin": 146817,
+          "end": 146836,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 1,
+      "pattern": 4,
+      "pattern_uuid": "{05fb827d-c8e4-4f96-9b97-da0bdbec3029}",
+      "visible": [
+        0.0,
+        51840.0
+      ],
+      "pitch_samples": 48596,
+      "vuv_samples": 316,
+      "flags": {
+        "1.0": 268,
+        "0.0": 48
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 48,
+        "(1.0, 'other_numeric')": 268
+      },
+      "runs": [
+        {
+          "begin": 3233,
+          "end": 3364,
+          "value": 1.0
+        },
+        {
+          "begin": 3364,
+          "end": 3400,
+          "value": 0.0
+        },
+        {
+          "begin": 18281,
+          "end": 18341,
+          "value": 1.0
+        },
+        {
+          "begin": 37417,
+          "end": 37440,
+          "value": 1.0
+        },
+        {
+          "begin": 37440,
+          "end": 37452,
+          "value": 0.0
+        },
+        {
+          "begin": 48697,
+          "end": 48751,
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "track": 2,
+      "pattern": 0,
+      "pattern_uuid": "{4e972fdd-006f-4588-89f2-5b436b494e95}",
+      "visible": [
+        7200.0,
+        14160.0
+      ],
+      "pitch_samples": 6399,
+      "vuv_samples": 245,
+      "flags": {
+        "1.0": 183,
+        "0.0": 62
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 62,
+        "(1.0, 'other_numeric')": 183
+      },
+      "runs": [
+        {
+          "begin": 9864,
+          "end": 9968,
+          "value": 1.0
+        },
+        {
+          "begin": 11030,
+          "end": 11078,
+          "value": 1.0
+        },
+        {
+          "begin": 11078,
+          "end": 11087,
+          "value": 0.0
+        },
+        {
+          "begin": 12867,
+          "end": 12875,
+          "value": 1.0
+        },
+        {
+          "begin": 12875,
+          "end": 12923,
+          "value": 0.0
+        },
+        {
+          "begin": 12925,
+          "end": 12930,
+          "value": 0.0
+        },
+        {
+          "begin": 12930,
+          "end": 12931,
+          "value": 1.0
+        },
+        {
+          "begin": 13425,
+          "end": 13447,
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "track": 2,
+      "pattern": 2,
+      "pattern_uuid": "{e53cf458-21d0-4c30-ac34-a49bd3bf5c0c}",
+      "visible": [
+        75120.0,
+        82320.0
+      ],
+      "pitch_samples": 6871,
+      "vuv_samples": 216,
+      "flags": {
+        "1.0": 216
+      },
+      "pairing": {
+        "(1.0, 'other_numeric')": 216
+      },
+      "runs": [
+        {
+          "begin": 75803,
+          "end": 76019,
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "track": 2,
+      "pattern": 3,
+      "pattern_uuid": "{9ddf43af-a8ee-44c2-b4f2-270e7b17381f}",
+      "visible": [
+        86160.0,
+        91413.0
+      ],
+      "pitch_samples": 5157,
+      "vuv_samples": 235,
+      "flags": {
+        "0.0": 38,
+        "1.0": 197
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 38,
+        "(1.0, 'other_numeric')": 197
+      },
+      "runs": [
+        {
+          "begin": 86422,
+          "end": 86460,
+          "value": 0.0
+        },
+        {
+          "begin": 86460,
+          "end": 86584,
+          "value": 1.0
+        },
+        {
+          "begin": 87684,
+          "end": 87757,
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "track": 2,
+      "pattern": 4,
+      "pattern_uuid": "{5953ffe5-3c41-4efa-8036-bb9fb7a8eedd}",
+      "visible": [
+        94293.0,
+        99093.0
+      ],
+      "pitch_samples": 4239,
+      "vuv_samples": 65,
+      "flags": {
+        "1.0": 32,
+        "0.0": 33
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 33,
+        "(1.0, 'other_numeric')": 32
+      },
+      "runs": [
+        {
+          "begin": 97363,
+          "end": 97395,
+          "value": 1.0
+        },
+        {
+          "begin": 97395,
+          "end": 97428,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 2,
+      "pattern": 5,
+      "pattern_uuid": "{1718c6ac-d860-4e14-9b7e-d227f20d9d59}",
+      "visible": [
+        102453.0,
+        104853.0
+      ],
+      "pitch_samples": 2400,
+      "vuv_samples": 257,
+      "flags": {
+        "0.0": 7,
+        "1.0": 250
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 7,
+        "(1.0, 'other_numeric')": 250
+      },
+      "runs": [
+        {
+          "begin": 102983,
+          "end": 102984,
+          "value": 0.0
+        },
+        {
+          "begin": 102984,
+          "end": 103189,
+          "value": 1.0
+        },
+        {
+          "begin": 103846,
+          "end": 103891,
+          "value": 1.0
+        },
+        {
+          "begin": 103891,
+          "end": 103897,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 2,
+      "pattern": 6,
+      "pattern_uuid": "{7f253d29-7ef4-49ef-b62f-edfee625746d}",
+      "visible": [
+        0.0,
+        4800.0
+      ],
+      "pitch_samples": 3873,
+      "vuv_samples": 271,
+      "flags": {
+        "1.0": 226,
+        "0.0": 45
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 45,
+        "(1.0, 'other_numeric')": 226
+      },
+      "runs": [
+        {
+          "begin": 2460,
+          "end": 2686,
+          "value": 1.0
+        },
+        {
+          "begin": 2686,
+          "end": 2731,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 2,
+      "pattern": 7,
+      "pattern_uuid": "{090a86de-8d8b-49a1-9ec9-644011663197}",
+      "visible": [
+        69600.0,
+        78720.0
+      ],
+      "pitch_samples": 8483,
+      "vuv_samples": 448,
+      "flags": {
+        "1.0": 430,
+        "0.0": 18
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 18,
+        "(1.0, 'other_numeric')": 406
+      },
+      "runs": [
+        {
+          "begin": 73332,
+          "end": 73357,
+          "value": 1.0
+        },
+        {
+          "begin": 73357,
+          "end": 73369,
+          "value": 0.0
+        },
+        {
+          "begin": 75613,
+          "end": 75696,
+          "value": 1.0
+        },
+        {
+          "begin": 75696,
+          "end": 75702,
+          "value": 0.0
+        },
+        {
+          "begin": 77763,
+          "end": 77775,
+          "value": 1.0
+        },
+        {
+          "begin": 77883,
+          "end": 77895,
+          "value": 1.0
+        },
+        {
+          "begin": 78003,
+          "end": 78301,
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "track": 2,
+      "pattern": 10,
+      "pattern_uuid": "{60daebeb-0f67-44ce-b757-3b4101008fb1}",
+      "visible": [
+        26640.0,
+        27840.0
+      ],
+      "pitch_samples": 1167,
+      "vuv_samples": 289,
+      "flags": {
+        "1.0": 250,
+        "0.0": 39
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 39,
+        "(1.0, 'other_numeric')": 217
+      },
+      "runs": [
+        {
+          "begin": 27324,
+          "end": 27541,
+          "value": 1.0
+        },
+        {
+          "begin": 27541,
+          "end": 27552,
+          "value": 0.0
+        },
+        {
+          "begin": 27552,
+          "end": 27585,
+          "value": 1.0
+        },
+        {
+          "begin": 27585,
+          "end": 27613,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 2,
+      "pattern": 12,
+      "pattern_uuid": "{ced11589-adf2-4c5b-9f5f-5ee2313ff3da}",
+      "visible": [
+        57600.0,
+        59760.0
+      ],
+      "pitch_samples": 2160,
+      "vuv_samples": 68,
+      "flags": {
+        "1.0": 37,
+        "0.0": 31
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 31,
+        "(1.0, 'other_numeric')": 37
+      },
+      "runs": [
+        {
+          "begin": 59109,
+          "end": 59146,
+          "value": 1.0
+        },
+        {
+          "begin": 59146,
+          "end": 59177,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 2,
+      "pattern": 13,
+      "pattern_uuid": "{288d6891-220d-4c34-8fdb-8ed5bc7a2486}",
+      "visible": [
+        90000.0,
+        92640.0
+      ],
+      "pitch_samples": 2545,
+      "vuv_samples": 312,
+      "flags": {
+        "0.0": 64,
+        "1.0": 248
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 64,
+        "(1.0, 'other_numeric')": 248
+      },
+      "runs": [
+        {
+          "begin": 91461,
+          "end": 91484,
+          "value": 0.0
+        },
+        {
+          "begin": 91484,
+          "end": 91716,
+          "value": 1.0
+        },
+        {
+          "begin": 91716,
+          "end": 91757,
+          "value": 0.0
+        },
+        {
+          "begin": 91757,
+          "end": 91773,
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "track": 3,
+      "pattern": 0,
+      "pattern_uuid": "{6d9f9a19-c045-4aa0-b550-d8e42349794f}",
+      "visible": [
+        14160.0,
+        17280.0
+      ],
+      "pitch_samples": 2832,
+      "vuv_samples": 246,
+      "flags": {
+        "1.0": 201,
+        "0.0": 45
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 45,
+        "(1.0, 'other_numeric')": 201
+      },
+      "runs": [
+        {
+          "begin": 14913,
+          "end": 15114,
+          "value": 1.0
+        },
+        {
+          "begin": 15114,
+          "end": 15159,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 3,
+      "pattern": 5,
+      "pattern_uuid": "{4504bdb5-30c8-4e8b-8369-df4a5d391499}",
+      "visible": [
+        133653.0,
+        137013.0
+      ],
+      "pitch_samples": 3029,
+      "vuv_samples": 35,
+      "flags": {
+        "1.0": 17,
+        "0.0": 18
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 18,
+        "(1.0, 'other_numeric')": 17
+      },
+      "runs": [
+        {
+          "begin": 134210,
+          "end": 134227,
+          "value": 1.0
+        },
+        {
+          "begin": 134227,
+          "end": 134245,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 3,
+      "pattern": 7,
+      "pattern_uuid": "{c0f58fe0-89bf-433e-940e-8aebb6876b04}",
+      "visible": [
+        153333.0,
+        159093.0
+      ],
+      "pitch_samples": 5335,
+      "vuv_samples": 121,
+      "flags": {
+        "1.0": 79,
+        "0.0": 42
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 42,
+        "(1.0, 'other_numeric')": 64
+      },
+      "runs": [
+        {
+          "begin": 157748,
+          "end": 157774,
+          "value": 1.0
+        },
+        {
+          "begin": 157774,
+          "end": 157787,
+          "value": 0.0
+        },
+        {
+          "begin": 158801,
+          "end": 158854,
+          "value": 1.0
+        },
+        {
+          "begin": 158854,
+          "end": 158883,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 3,
+      "pattern": 10,
+      "pattern_uuid": "{9fa1c074-7350-432c-b924-fb8e2d29d3f2}",
+      "visible": [
+        58800.0,
+        62400.0
+      ],
+      "pitch_samples": 3251,
+      "vuv_samples": 80,
+      "flags": {
+        "1.0": 80
+      },
+      "pairing": {
+        "(1.0, 'other_numeric')": 54
+      },
+      "runs": [
+        {
+          "begin": 59467,
+          "end": 59547,
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "track": 3,
+      "pattern": 11,
+      "pattern_uuid": "{837ced62-d3c6-4121-823d-15481ddaf495}",
+      "visible": [
+        105360.0,
+        109440.0
+      ],
+      "pitch_samples": 4080,
+      "vuv_samples": 57,
+      "flags": {
+        "1.0": 51,
+        "0.0": 6
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 6,
+        "(1.0, 'other_numeric')": 51
+      },
+      "runs": [
+        {
+          "begin": 106637,
+          "end": 106688,
+          "value": 1.0
+        },
+        {
+          "begin": 106688,
+          "end": 106694,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 3,
+      "pattern": 12,
+      "pattern_uuid": "{ae055541-d787-4953-9210-c962bd66862c}",
+      "visible": [
+        113280.0,
+        114720.0
+      ],
+      "pitch_samples": 1408,
+      "vuv_samples": 140,
+      "flags": {
+        "1.0": 78,
+        "0.0": 62
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 62,
+        "(1.0, 'other_numeric')": 46
+      },
+      "runs": [
+        {
+          "begin": 114105,
+          "end": 114151,
+          "value": 1.0
+        },
+        {
+          "begin": 114151,
+          "end": 114164,
+          "value": 0.0
+        },
+        {
+          "begin": 114164,
+          "end": 114196,
+          "value": 1.0
+        },
+        {
+          "begin": 114196,
+          "end": 114245,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 3,
+      "pattern": 14,
+      "pattern_uuid": "{d2fbd6d3-8194-4e85-8d2a-76c94583569e}",
+      "visible": [
+        71040.0,
+        90000.0
+      ],
+      "pitch_samples": 18682,
+      "vuv_samples": 67,
+      "flags": {
+        "1.0": 56,
+        "0.0": 11
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 11,
+        "(1.0, 'other_numeric')": 56
+      },
+      "runs": [
+        {
+          "begin": 75031,
+          "end": 75087,
+          "value": 1.0
+        },
+        {
+          "begin": 75087,
+          "end": 75098,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 3,
+      "pattern": 16,
+      "pattern_uuid": "{52c1a895-184a-42e1-9a85-960f10d5491a}",
+      "visible": [
+        110400.0,
+        119040.0
+      ],
+      "pitch_samples": 8214,
+      "vuv_samples": 449,
+      "flags": {
+        "1.0": 331,
+        "0.0": 118
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 118,
+        "(1.0, 'other_numeric')": 331
+      },
+      "runs": [
+        {
+          "begin": 111160,
+          "end": 111255,
+          "value": 1.0
+        },
+        {
+          "begin": 111255,
+          "end": 111270,
+          "value": 0.0
+        },
+        {
+          "begin": 111420,
+          "end": 111541,
+          "value": 1.0
+        },
+        {
+          "begin": 111575,
+          "end": 111690,
+          "value": 1.0
+        },
+        {
+          "begin": 111690,
+          "end": 111793,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 3,
+      "pattern": 18,
+      "pattern_uuid": "{b9491188-8619-4968-a6ce-55a9e08c2f6a}",
+      "visible": [
+        31680.0,
+        36960.0
+      ],
+      "pitch_samples": 5089,
+      "vuv_samples": 72,
+      "flags": {
+        "1.0": 47,
+        "0.0": 25
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 25,
+        "(1.0, 'other_numeric')": 47
+      },
+      "runs": [
+        {
+          "begin": 36705,
+          "end": 36752,
+          "value": 1.0
+        },
+        {
+          "begin": 36752,
+          "end": 36777,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 3,
+      "pattern": 19,
+      "pattern_uuid": "{cac559a5-0f1a-4229-88cc-0e63d48e5ed2}",
+      "visible": [
+        110400.0,
+        119040.0
+      ],
+      "pitch_samples": 8214,
+      "vuv_samples": 449,
+      "flags": {
+        "1.0": 331,
+        "0.0": 118
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 118,
+        "(1.0, 'other_numeric')": 331
+      },
+      "runs": [
+        {
+          "begin": 111160,
+          "end": 111255,
+          "value": 1.0
+        },
+        {
+          "begin": 111255,
+          "end": 111270,
+          "value": 0.0
+        },
+        {
+          "begin": 111420,
+          "end": 111541,
+          "value": 1.0
+        },
+        {
+          "begin": 111575,
+          "end": 111690,
+          "value": 1.0
+        },
+        {
+          "begin": 111690,
+          "end": 111793,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 4,
+      "pattern": 1,
+      "pattern_uuid": "{3cb2774b-be93-4510-afff-da9dd85667e2}",
+      "visible": [
+        17280.0,
+        27360.0
+      ],
+      "pitch_samples": 9574,
+      "vuv_samples": 74,
+      "flags": {
+        "1.0": 34,
+        "0.0": 40
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 40,
+        "(1.0, 'other_numeric')": 34
+      },
+      "runs": [
+        {
+          "begin": 23422,
+          "end": 23456,
+          "value": 1.0
+        },
+        {
+          "begin": 23456,
+          "end": 23496,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 4,
+      "pattern": 2,
+      "pattern_uuid": "{3f3db652-03e6-4129-a43b-5458d3edc3a4}",
+      "visible": [
+        29760.0,
+        46380.0
+      ],
+      "pitch_samples": 15862,
+      "vuv_samples": 341,
+      "flags": {
+        "1.0": 318,
+        "0.0": 23
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 22,
+        "(1.0, 'other_numeric')": 274
+      },
+      "runs": [
+        {
+          "begin": 32683,
+          "end": 32787,
+          "value": 1.0
+        },
+        {
+          "begin": 32787,
+          "end": 32805,
+          "value": 0.0
+        },
+        {
+          "begin": 38788,
+          "end": 38925,
+          "value": 1.0
+        },
+        {
+          "begin": 38925,
+          "end": 38926,
+          "value": 0.0
+        },
+        {
+          "begin": 40659,
+          "end": 40717,
+          "value": 1.0
+        },
+        {
+          "begin": 45883,
+          "end": 45902,
+          "value": 1.0
+        },
+        {
+          "begin": 45902,
+          "end": 45906,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 4,
+      "pattern": 3,
+      "pattern_uuid": "{19f79b08-dc0b-43e9-b76c-a8c402bd283a}",
+      "visible": [
+        1200.0,
+        5760.0
+      ],
+      "pitch_samples": 4067,
+      "vuv_samples": 232,
+      "flags": {
+        "1.0": 141,
+        "0.0": 91
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 90,
+        "(1.0, 'other_numeric')": 22
+      },
+      "runs": [
+        {
+          "begin": 5259,
+          "end": 5400,
+          "value": 1.0
+        },
+        {
+          "begin": 5400,
+          "end": 5491,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 4,
+      "pattern": 6,
+      "pattern_uuid": "{82a68da7-3280-4f1a-8533-741c2081edff}",
+      "visible": [
+        91413.0,
+        94293.0
+      ],
+      "pitch_samples": 2698,
+      "vuv_samples": 105,
+      "flags": {
+        "0.0": 71,
+        "1.0": 34
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 71,
+        "(1.0, 'other_numeric')": 34
+      },
+      "runs": [
+        {
+          "begin": 91551,
+          "end": 91555,
+          "value": 0.0
+        },
+        {
+          "begin": 93033,
+          "end": 93066,
+          "value": 1.0
+        },
+        {
+          "begin": 93066,
+          "end": 93133,
+          "value": 0.0
+        },
+        {
+          "begin": 93133,
+          "end": 93134,
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "track": 4,
+      "pattern": 7,
+      "pattern_uuid": "{14da3a5d-d99e-464e-b640-b1cb32274915}",
+      "visible": [
+        124533.0,
+        133653.0
+      ],
+      "pitch_samples": 8292,
+      "vuv_samples": 205,
+      "flags": {
+        "1.0": 125,
+        "0.0": 80
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 80,
+        "(1.0, 'other_numeric')": 125
+      },
+      "runs": [
+        {
+          "begin": 125180,
+          "end": 125281,
+          "value": 1.0
+        },
+        {
+          "begin": 125281,
+          "end": 125318,
+          "value": 0.0
+        },
+        {
+          "begin": 125659,
+          "end": 125678,
+          "value": 1.0
+        },
+        {
+          "begin": 125678,
+          "end": 125695,
+          "value": 0.0
+        },
+        {
+          "begin": 128977,
+          "end": 128982,
+          "value": 1.0
+        },
+        {
+          "begin": 128982,
+          "end": 129008,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 4,
+      "pattern": 8,
+      "pattern_uuid": "{5354bb72-f7c4-4d18-9f38-72feb5630a5f}",
+      "visible": [
+        137013.0,
+        141333.0
+      ],
+      "pitch_samples": 4129,
+      "vuv_samples": 149,
+      "flags": {
+        "1.0": 149
+      },
+      "pairing": {
+        "(1.0, 'other_numeric')": 149
+      },
+      "runs": [
+        {
+          "begin": 139775,
+          "end": 139822,
+          "value": 1.0
+        },
+        {
+          "begin": 140163,
+          "end": 140265,
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "track": 4,
+      "pattern": 9,
+      "pattern_uuid": "{f09d6185-35df-429f-a3cc-a000ebca3212}",
+      "visible": [
+        149493.0,
+        153333.0
+      ],
+      "pitch_samples": 3840,
+      "vuv_samples": 31,
+      "flags": {
+        "1.0": 20,
+        "0.0": 11
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 11,
+        "(1.0, 'other_numeric')": 20
+      },
+      "runs": [
+        {
+          "begin": 152379,
+          "end": 152399,
+          "value": 1.0
+        },
+        {
+          "begin": 152399,
+          "end": 152410,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 4,
+      "pattern": 15,
+      "pattern_uuid": "{6a6fda8d-0228-4a35-8e49-2182bfe9e527}",
+      "visible": [
+        90480.0,
+        105360.0
+      ],
+      "pitch_samples": 13921,
+      "vuv_samples": 100,
+      "flags": {
+        "1.0": 85,
+        "0.0": 15
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 15,
+        "(1.0, 'other_numeric')": 85
+      },
+      "runs": [
+        {
+          "begin": 93394,
+          "end": 93431,
+          "value": 1.0
+        },
+        {
+          "begin": 93431,
+          "end": 93437,
+          "value": 0.0
+        },
+        {
+          "begin": 104586,
+          "end": 104634,
+          "value": 1.0
+        },
+        {
+          "begin": 104634,
+          "end": 104643,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 4,
+      "pattern": 16,
+      "pattern_uuid": "{54288ee2-f72d-4dd0-ae8a-6ba1317e160e}",
+      "visible": [
+        109440.0,
+        113280.0
+      ],
+      "pitch_samples": 3523,
+      "vuv_samples": 45,
+      "flags": {
+        "1.0": 45
+      },
+      "pairing": {
+        "(1.0, 'other_numeric')": 45
+      },
+      "runs": [
+        {
+          "begin": 111227,
+          "end": 111272,
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "track": 4,
+      "pattern": 17,
+      "pattern_uuid": "{7b7c3cff-605d-48fa-87b3-b2dc40e222d4}",
+      "visible": [
+        114720.0,
+        126240.0
+      ],
+      "pitch_samples": 10479,
+      "vuv_samples": 266,
+      "flags": {
+        "1.0": 218,
+        "0.0": 48
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 48,
+        "(1.0, 'other_numeric')": 133
+      },
+      "runs": [
+        {
+          "begin": 116555,
+          "end": 116641,
+          "value": 1.0
+        },
+        {
+          "begin": 116641,
+          "end": 116646,
+          "value": 0.0
+        },
+        {
+          "begin": 116694,
+          "end": 116779,
+          "value": 1.0
+        },
+        {
+          "begin": 116779,
+          "end": 116811,
+          "value": 0.0
+        },
+        {
+          "begin": 118267,
+          "end": 118314,
+          "value": 1.0
+        },
+        {
+          "begin": 118314,
+          "end": 118325,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 4,
+      "pattern": 19,
+      "pattern_uuid": "{1de77869-da0a-4172-b48d-4c7a88223a5b}",
+      "visible": [
+        39360.0,
+        46680.0
+      ],
+      "pitch_samples": 6672,
+      "vuv_samples": 51,
+      "flags": {
+        "1.0": 31,
+        "0.0": 20
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 20,
+        "(1.0, 'other_numeric')": 31
+      },
+      "runs": [
+        {
+          "begin": 42420,
+          "end": 42451,
+          "value": 1.0
+        },
+        {
+          "begin": 42451,
+          "end": 42471,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 4,
+      "pattern": 20,
+      "pattern_uuid": "{6f421ac6-df66-4957-9e3a-e6402b34749c}",
+      "visible": [
+        47160.0,
+        58560.0
+      ],
+      "pitch_samples": 9330,
+      "vuv_samples": 136,
+      "flags": {
+        "1.0": 128,
+        "0.0": 8
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 8,
+        "(1.0, 'other_numeric')": 128
+      },
+      "runs": [
+        {
+          "begin": 50489,
+          "end": 50617,
+          "value": 1.0
+        },
+        {
+          "begin": 50617,
+          "end": 50625,
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "track": 4,
+      "pattern": 23,
+      "pattern_uuid": "{cf5efa69-a5fd-42bc-a24f-6949642b3e3b}",
+      "visible": [
+        37440.0,
+        48240.0
+      ],
+      "pitch_samples": 10341,
+      "vuv_samples": 99,
+      "flags": {
+        "0.0": 2,
+        "1.0": 97
+      },
+      "pairing": {
+        "(0.0, 'other_numeric')": 2,
+        "(1.0, 'other_numeric')": 97
+      },
+      "runs": [
+        {
+          "begin": 43555,
+          "end": 43557,
+          "value": 0.0
+        },
+        {
+          "begin": 43557,
+          "end": 43654,
+          "value": 1.0
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "No original file write, synthesis, audio inspection or live project operation.",
+    "Raw VUV values do not alone identify live effective voicing.",
+    "Public baseline is a format-conversion algorithm, not confirmed current ACE engine parity.",
+    "Visible occurrences can duplicate source notes across separate trim patterns."
+  ],
+  "highlight_windows": [
+    {
+      "track": 0,
+      "pattern": 0,
+      "range": [
+        3065,
+        3190
+      ],
+      "vuv_runs": [
+        {
+          "begin": 3073,
+          "end": 3124,
+          "value": 1.0
+        },
+        {
+          "begin": 3124,
+          "end": 3156,
+          "value": 0.0
+        }
+      ],
+      "selected_pitch_and_vuv": [
+        {
+          "tick": 3073,
+          "pitch_delta": -0.03845977783203125,
+          "vuv": 1.0
+        },
+        {
+          "tick": 3123,
+          "pitch_delta": -0.9615402221679688,
+          "vuv": 1.0
+        },
+        {
+          "tick": 3124,
+          "pitch_delta": -0.9615402221679688,
+          "vuv": 0.0
+        },
+        {
+          "tick": 3155,
+          "pitch_delta": -1.5,
+          "vuv": 0.0
+        },
+        {
+          "tick": 3178,
+          "pitch_delta": -63.0,
+          "vuv": null
+        }
+      ]
+    },
+    {
+      "track": 4,
+      "pattern": 6,
+      "range": [
+        91535,
+        91565
+      ],
+      "vuv_runs": [
+        {
+          "begin": 91551,
+          "end": 91555,
+          "value": 0.0
+        }
+      ],
+      "selected_pitch_and_vuv": [
+        {
+          "tick": 91550,
+          "pitch_delta": -57.0,
+          "vuv": null
+        },
+        {
+          "tick": 91551,
+          "pitch_delta": 19.346153259277344,
+          "vuv": 0.0
+        },
+        {
+          "tick": 91554,
+          "pitch_delta": 19.409893035888672,
+          "vuv": 0.0
+        },
+        {
+          "tick": 91555,
+          "pitch_delta": -57.0,
+          "vuv": null
+        }
+      ]
+    },
+    {
+      "track": 0,
+      "pattern": 10,
+      "range": [
+        55470,
+        55510
+      ],
+      "vuv_runs": [],
+      "selected_pitch_and_vuv": [
+        {
+          "tick": 55478,
+          "pitch_delta": -58.0,
+          "vuv": null
+        },
+        {
+          "tick": 55488,
+          "pitch_delta": 23.705053329467773,
+          "vuv": null
+        },
+        {
+          "tick": 55500,
+          "pitch_delta": 15.140019416809082,
+          "vuv": null
+        }
+      ]
+    }
+  ]
+}
